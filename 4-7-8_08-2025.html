@@ -239,15 +239,20 @@
 
   <!-- Donation Panel -->
   <div class="donate-panel">
-    <h3>Support Me</h3>
-    <div class="donate-options">
-      <button onclick="donate(1)">$1</button>
-      <button onclick="donate(5)">$5</button>
-      <button onclick="donate(10)">$10</button>
+  <h3>Support Me ❤️</h3>
+  <p>If this breathing guide helped you relax, sleep, or calm anxiety, consider supporting me. Every contribution keeps this project alive!</p>
+  
+  <div class="donate-options">
+    <button onclick="donate(1)" class="donate-btn">$1</button>
+    <button onclick="donate(5)" class="donate-btn">$5</button>
+    <button onclick="donate(10)" class="donate-btn">$10</button>
+
+    <div class="custom-donate">
       <input type="number" id="customAmount" placeholder="Custom $" min="1">
-      <button onclick="donateCustom()">Donate</button>
+      <button onclick="donateCustom()" class="donate-btn">Donate</button>
     </div>
   </div>
+</div>
 
   <!-- Audio Element -->
   <audio id="breathingAudio" src="audio/tibetan-bowl-26240.mp3"></audio>
