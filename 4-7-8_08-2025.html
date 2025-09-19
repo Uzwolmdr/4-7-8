@@ -45,7 +45,8 @@
       justify-content: center;
       align-items: center;
       text-align: center;
-      padding: 20px;
+      padding: 100px 20px 40px; /* extra top padding to prevent touching top */
+      box-sizing: border-box;
     }
 
     .circle {
@@ -65,8 +66,9 @@
       font-size: 20px;
       padding: 20px;
       transition: transform 4s ease-in-out;
-      margin-bottom: 60px;
+      margin-bottom: 100px; /* more space so it won’t overlap the counter */
       overflow: hidden;
+      transform-origin: center center; /* ensures expansion is centered */
     }
 
     .circle::before {
@@ -179,12 +181,43 @@
       margin-bottom: 15px;
     }
 
-    /* Responsive donation panel */
-    @media (max-width: 500px) {
+    /* Tablet adjustments */
+    @media (max-width: 768px) {
+      .breathing-section {
+        padding: 60px 20px 30px; /* reduce top padding */
+      }
+
+      .circle {
+        margin-bottom: 60px;
+      }
+
+      .counter {
+        font-size: 22px;
+      }
+
+      .button {
+        font-size: 16px;
+        padding: 12px 24px;
+      }
+    }
+
+    /* Small phone adjustments */
+    @media (max-width: 480px) {
+      .breathing-section {
+        padding: 40px 10px 20px;
+      }
+
+      .circle {
+        width: 70vw;
+        height: 70vw;
+        margin-bottom: 40px;
+      }
+
       .donate-panel {
-        right: 10px;
-        width: 140px;
-        font-size: 12px;
+        position: static;   /* move it below content */
+        margin: 20px auto;
+        transform: none;
+        width: 90%;
       }
     }
   </style>
@@ -274,7 +307,7 @@
       startCountdown(4);
 
       setTimeout(() => {
-        // Hold (7s) with subtle pulse
+        // Hold (7s)
         text.textContent = "Hold your breath";
         circle.style.transition = "transform 7s ease-in-out";
         circle.style.transform = "scale(1.45)";
@@ -294,7 +327,7 @@
     }
 
     button.addEventListener('click', () => {
-      button.disabled = true; // disable button after starting
+      button.disabled = true;
       breathingCycle();
     });
 
