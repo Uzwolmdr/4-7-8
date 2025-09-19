@@ -7,17 +7,6 @@
   <meta name="description" content="Learn the 4-7-8 breathing technique to reduce anxiety, improve sleep, and calm panic attacks. Try our interactive breathing guide now.">
   <meta name="keywords" content="anxiety relief, insomnia treatment, breathing exercise, 4-7-8 technique, panic attack help, relaxation method">
 
-  <!-- Open Graph / Twitter Cards -->
-  <meta property="og:title" content="4-7-8 Breathing Technique for Anxiety, Insomnia & Relaxation">
-  <meta property="og:description" content="Learn the 4-7-8 breathing technique to reduce anxiety, improve sleep, and calm panic attacks. Try our interactive breathing guide now.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="YOUR_PAGE_URL">
-  <meta property="og:image" content="IMAGE_URL_IF_ANY">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="4-7-8 Breathing Technique for Anxiety, Insomnia & Relaxation">
-  <meta name="twitter:description" content="Learn the 4-7-8 breathing technique to reduce anxiety, improve sleep, and calm panic attacks. Try our interactive breathing guide now.">
-  <meta name="twitter:image" content="IMAGE_URL_IF_ANY">
-
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -46,6 +35,7 @@
       text-align: center;
       padding: 100px 20px 40px;
       box-sizing: border-box;
+      position: relative;
     }
 
     .circle {
@@ -201,7 +191,9 @@
       <div class="text">Inhale through your nose</div>
     </div>
     <div class="counter">Ready?</div>
-    <button class="button" aria-label="Start 4-7-8 Breathing Exercise">Start 4-7-8</button>
+    <div>
+      <button class="button" id="startBtn">Start 4-7-8</button>
+    </div>
   </section>
 
   <!-- SEO Content Section -->
@@ -239,20 +231,18 @@
 
   <!-- Donation Panel -->
   <div class="donate-panel">
-  <h3>Support Me ❤️</h3>
-  <p>If this breathing guide helped you relax, sleep, or calm anxiety, consider supporting me. Every contribution keeps this project alive!</p>
-  
-  <div class="donate-options">
-    <button onclick="donate(1)" class="donate-btn">$1</button>
-    <button onclick="donate(5)" class="donate-btn">$5</button>
-    <button onclick="donate(10)" class="donate-btn">$10</button>
-
-    <div class="custom-donate">
-      <input type="number" id="customAmount" placeholder="Custom $" min="1">
-      <button onclick="donateCustom()" class="donate-btn">Donate</button>
+    <h3>Support Me ❤️</h3>
+    <p>If this breathing guide helped you relax, sleep, or calm anxiety, consider supporting me. Every contribution keeps this project alive!</p>
+    <div class="donate-options">
+      <button onclick="donate(1)" class="donate-btn">$1</button>
+      <button onclick="donate(5)" class="donate-btn">$5</button>
+      <button onclick="donate(10)" class="donate-btn">$10</button>
+      <div class="custom-donate">
+        <input type="number" id="customAmount" placeholder="Custom $" min="1">
+        <button onclick="donateCustom()" class="donate-btn">Donate</button>
+      </div>
     </div>
   </div>
-</div>
 
   <!-- Audio Element -->
   <audio id="breathingAudio" src="audio/tibetan-bowl-26240.mp3"></audio>
@@ -261,50 +251,95 @@
     const circle = document.querySelector('.circle');
     const text = document.querySelector('.text');
     const counter = document.querySelector('.counter');
-    const button = document.querySelector('.button');
+    const startBtn = document.getElementById('startBtn');
     const audio = document.getElementById('breathingAudio');
 
     let countdown;
+    let cycleTimeouts = [];
+    let currentPhase = null;
+    let remainingTime = 0;
+    let isPaused = false;
+    let hasStarted = false;
+
+    const phases = [
+      { label: "Inhale through your nose", duration: 4, scale: 1.4 },
+      { label: "Hold your breath", duration: 7, scale: 1.45 },
+      { label: "Exhale through your mouth making a whoosh sound", duration: 8, scale: 1 }
+    ];
+
+    let phaseIndex = 0;
 
     function startCountdown(seconds) {
       clearInterval(countdown);
-      let timeLeft = seconds;
-      counter.textContent = timeLeft;
+      remainingTime = seconds;
+      counter.textContent = remainingTime;
+
       countdown = setInterval(() => {
-        timeLeft--;
-        counter.textContent = timeLeft > 0 ? timeLeft : "";
-        if (timeLeft <= 0) clearInterval(countdown);
+        if (!isPaused) {
+          remainingTime--;
+          counter.textContent = remainingTime > 0 ? remainingTime : "";
+          if (remainingTime <= 0) clearInterval(countdown);
+        }
       }, 1000);
     }
 
-    function breathingCycle() {
-      text.textContent = "Inhale through your nose";
-      circle.style.transition = "transform 4s ease-in-out";
-      circle.style.transform = "scale(1.4)";
-      startCountdown(4);
+    function runPhase(index) {
+      if (isPaused) return;
 
-      setTimeout(() => {
-        text.textContent = "Hold your breath";
-        circle.style.transition = "transform 7s ease-in-out";
-        circle.style.transform = "scale(1.45)";
-        startCountdown(7);
-      }, 4000);
+      const phase = phases[index];
+      currentPhase = phase;
 
-      setTimeout(() => {
-        text.textContent = "Exhale through your mouth making a whoosh sound";
-        circle.style.transition = "transform 8s ease-in-out";
-        circle.style.transform = "scale(1)";
-        startCountdown(8);
-      }, 11000);
+      text.textContent = phase.label;
+      circle.style.transition = `transform ${phase.duration}s ease-in-out`;
+      circle.style.transform = `scale(${phase.scale})`;
 
-      setTimeout(breathingCycle, 19000);
+      startCountdown(phase.duration);
+
+      const timeout = setTimeout(() => {
+        phaseIndex = (phaseIndex + 1) % phases.length;
+        runPhase(phaseIndex);
+      }, phase.duration * 1000);
+
+      cycleTimeouts.push(timeout);
     }
 
-    button.addEventListener('click', () => {
-      button.disabled = true;
-      audio.play(); // Play the MP3 when the user clicks start
-      breathingCycle();
-    });
+    function startBreathing() {
+      if (!hasStarted) {
+        hasStarted = true;
+        startBtn.textContent = "Pause";
+        audio.play();
+        phaseIndex = 0;
+        runPhase(phaseIndex);
+      } else if (!isPaused) {
+        // Pause
+        isPaused = true;
+        startBtn.textContent = "Resume";
+        clearInterval(countdown);
+        cycleTimeouts.forEach(t => clearTimeout(t));
+        audio.pause();
+        const computedStyle = window.getComputedStyle(circle);
+        circle.style.transition = "";
+        circle.style.transform = computedStyle.transform;
+      } else {
+        // Resume
+        isPaused = false;
+        startBtn.textContent = "Pause";
+        audio.play();
+        const phase = currentPhase;
+        circle.style.transition = `transform ${remainingTime}s linear`;
+        circle.style.transform = `scale(${phase.scale})`;
+        startCountdown(remainingTime);
+
+        const timeout = setTimeout(() => {
+          phaseIndex = (phaseIndex + 1) % phases.length;
+          runPhase(phaseIndex);
+        }, remainingTime * 1000);
+
+        cycleTimeouts = [timeout];
+      }
+    }
+
+    startBtn.addEventListener('click', startBreathing);
 
     // PayPal.Me donation functions
     const paypalMeLink = "https://paypal.me/UjjwalManandhar";
