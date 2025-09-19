@@ -2,23 +2,55 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>4-7-8 Breathing Exercise</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>4-7-8 Breathing Technique for Anxiety, Insomnia & Relaxation</title>
+  <meta name="description" content="Learn the 4-7-8 breathing technique to reduce anxiety, improve sleep, and calm panic attacks. Try our interactive breathing guide now.">
+  <meta name="keywords" content="anxiety relief, insomnia treatment, breathing exercise, 4-7-8 technique, panic attack help, relaxation method">
+
+  <!-- Open Graph / Twitter Cards -->
+  <meta property="og:title" content="4-7-8 Breathing Technique for Anxiety, Insomnia & Relaxation">
+  <meta property="og:description" content="Learn the 4-7-8 breathing technique to reduce anxiety, improve sleep, and calm panic attacks. Try our interactive breathing guide now.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="YOUR_PAGE_URL">
+  <meta property="og:image" content="IMAGE_URL_IF_ANY">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="4-7-8 Breathing Technique for Anxiety, Insomnia & Relaxation">
+  <meta name="twitter:description" content="Learn the 4-7-8 breathing technique to reduce anxiety, improve sleep, and calm panic attacks. Try our interactive breathing guide now.">
+  <meta name="twitter:image" content="IMAGE_URL_IF_ANY">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "4-7-8 Breathing Technique for Anxiety & Insomnia",
+    "description": "Learn the 4-7-8 breathing exercise to calm anxiety, improve sleep, and reduce panic attacks.",
+    "keywords": "4-7-8 breathing, anxiety relief, insomnia, sleeplessness, panic attack"
+  }
+  </script>
+
   <style>
     body {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center; /* center vertically so circle never hits top */
-      height: 100vh;
-      background: #111;
       margin: 0;
       font-family: Arial, sans-serif;
+      background: #111;
+      color: #eee;
       box-sizing: border-box;
     }
 
+    /* Breathing Section */
+    .breathing-section {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+    }
+
     .circle {
-      width: 280px;   /* slightly smaller base so scaling won’t overflow */
-      height: 280px;
+      width: min(80vw, 280px);
+      height: min(80vw, 280px);
       border-radius: 50%;
       background: radial-gradient(circle at 30% 30%, #1e3c72, #2a5298, #0a1a2f);
       box-shadow: 
@@ -30,9 +62,8 @@
       justify-content: center;
       align-items: center;
       color: white;
-      text-align: center;
-      padding: 20px;
       font-size: 20px;
+      padding: 20px;
       transition: transform 4s ease-in-out;
       margin-bottom: 60px;
       overflow: hidden;
@@ -126,16 +157,82 @@
     .donate-options input[type="number"] {
       text-align: center;
     }
+
+    /* Content Section */
+    .content-section {
+      max-width: 800px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    .content-section h1, h2, h3 {
+      color: #00e6e6;
+    }
+
+    .faq {
+      margin-top: 20px;
+    }
+    .faq h3 {
+      margin-bottom: 10px;
+    }
+    .faq p {
+      margin-bottom: 15px;
+    }
+
+    /* Responsive donation panel */
+    @media (max-width: 500px) {
+      .donate-panel {
+        right: 10px;
+        width: 140px;
+        font-size: 12px;
+      }
+    }
   </style>
 </head>
 <body>
-  <div class="circle">
-    <div class="text">Inhale through your nose</div>
-  </div>
-  <div class="counter">Ready?</div>
-  <button class="button">Start 4-7-8</button>
+  <!-- Breathing Section -->
+  <section class="breathing-section">
+    <div class="circle">
+      <div class="text">Inhale through your nose</div>
+    </div>
+    <div class="counter">Ready?</div>
+    <button class="button" aria-label="Start 4-7-8 Breathing Exercise">Start 4-7-8</button>
+  </section>
 
-  <!-- Donation panel -->
+  <!-- SEO Content Section -->
+  <section class="content-section">
+    <h1>4-7-8 Breathing Technique</h1>
+    <p>The 4-7-8 breathing technique is a simple but powerful exercise to calm anxiety, fight insomnia, and control panic attacks. By focusing on your breath, you relax your body and mind naturally.</p>
+
+    <h2>Benefits of 4-7-8 Breathing</h2>
+    <ul>
+      <li>Helps with <strong>anxiety</strong> and stress relief</li>
+      <li>Improves <strong>sleep</strong> and fights <strong>insomnia</strong></li>
+      <li>Useful for <strong>panic attacks</strong> and emotional regulation</li>
+    </ul>
+
+    <h2>How to Do the 4-7-8 Technique</h2>
+    <ol>
+      <li>Inhale quietly through your nose for 4 seconds.</li>
+      <li>Hold your breath for 7 seconds.</li>
+      <li>Exhale completely through your mouth with a whoosh sound for 8 seconds.</li>
+      <li>Repeat the cycle 4 times.</li>
+    </ol>
+
+    <div class="faq">
+      <h2>Frequently Asked Questions</h2>
+      <h3>Does 4-7-8 breathing really help anxiety?</h3>
+      <p>Yes, this method can calm your nervous system and reduce stress hormones, making it easier to manage anxiety.</p>
+
+      <h3>How many times should I do 4-7-8 breathing before sleep?</h3>
+      <p>Most experts recommend starting with 4 cycles before bed. Over time, you can increase the number of cycles.</p>
+
+      <h3>Is it safe to do daily?</h3>
+      <p>Yes, it’s safe to practice daily. In fact, consistency helps you get the most benefits.</p>
+    </div>
+  </section>
+
+  <!-- Donation Panel -->
   <div class="donate-panel">
     <h3>Support Me</h3>
     <div class="donate-options">
@@ -154,6 +251,7 @@
     const button = document.querySelector('.button');
 
     let countdown;
+    let cycle = 0; // Track cycle repetitions
 
     function startCountdown(seconds) {
       clearInterval(countdown);
@@ -168,7 +266,7 @@
       }, 1000);
     }
 
-    function startBreathing() {
+    function breathingCycle() {
       // Inhale (4s)
       text.textContent = "Inhale through your nose";
       circle.style.transition = "transform 4s ease-in-out";
@@ -176,10 +274,10 @@
       startCountdown(4);
 
       setTimeout(() => {
-        // Hold (7s)
+        // Hold (7s) with subtle pulse
         text.textContent = "Hold your breath";
         circle.style.transition = "transform 7s ease-in-out";
-        circle.style.transform = "scale(1.4)";
+        circle.style.transform = "scale(1.45)";
         startCountdown(7);
       }, 4000);
 
@@ -190,9 +288,15 @@
         circle.style.transform = "scale(1)";
         startCountdown(8);
       }, 11000);
+
+      // Repeat cycle after 19s (4+7+8)
+      setTimeout(breathingCycle, 19000);
     }
 
-    button.addEventListener('click', startBreathing);
+    button.addEventListener('click', () => {
+      button.disabled = true; // disable button after starting
+      breathingCycle();
+    });
 
     // PayPal Donation functions
     function donate(amount) {
