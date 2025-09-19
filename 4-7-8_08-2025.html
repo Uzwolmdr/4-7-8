@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>4-7-8 Breathing Exercise</title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center; /* center vertically so circle never hits top */
+      height: 100vh;
+      background: #111;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      box-sizing: border-box;
+    }
+
+    .circle {
+      width: 280px;   /* slightly smaller base so scaling won’t overflow */
+      height: 280px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 30% 30%, #1e3c72, #2a5298, #0a1a2f);
+      box-shadow: 
+        0 0 35px rgba(42, 82, 152, 0.9),
+        inset -12px -12px 25px rgba(255, 255, 255, 0.1),
+        inset 8px 8px 20px rgba(0, 0, 0, 0.4);
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 20px;
+      transition: transform 4s ease-in-out;
+      margin-bottom: 60px;
+      overflow: hidden;
+    }
+
+    .circle::before {
+      content: "";
+      position: absolute;
+      top: -30%;
+      left: -30%;
+      width: 160%;
+      height: 160%;
+      background: radial-gradient(ellipse at top left, rgba(255,255,255,0.2), transparent 70%);
+      transform: rotate(-25deg);
+      pointer-events: none;
+    }
+
+    .text {
+      width: 80%;
+      word-wrap: break-word;
+      font-size: clamp(16px, 2vw, 20px);
+      z-index: 1;
+    }
+
+    .counter {
+      margin-bottom: 40px;
+      font-size: 28px;
+      color: #00e6e6;
+      font-weight: bold;
+      text-shadow: 0 0 10px #00e6e6, 0 0 20px #2a5298;
+    }
+
+    .button {
+      padding: 14px 32px;
+      background-color: #2a5298;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 18px;
+      transition: background-color 0.3s ease;
+    }
+
+    .button:hover {
+      background-color: #1e3c72;
+    }
+
+    /* Donation panel */
+    .donate-panel {
+      position: fixed;
+      top: 50%;
+      right: 20px;
+      transform: translateY(-50%);
+      background: #1e1e1e;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0, 230, 230, 0.4);
+      color: white;
+      font-size: 14px;
+      text-align: center;
+      width: 160px;
+    }
+
+    .donate-panel h3 {
+      margin-top: 0;
+      margin-bottom: 10px;
+      font-size: 16px;
+      color: #00e6e6;
+    }
+
+    .donate-options button,
+    .donate-options input[type="number"] {
+      margin: 5px 0;
+      width: 100%;
+      padding: 8px;
+      border-radius: 6px;
+      border: none;
+      font-size: 14px;
+    }
+
+    .donate-options button {
+      background: #2a5298;
+      color: white;
+      cursor: pointer;
+    }
+
+    .donate-options button:hover {
+      background: #1e3c72;
+    }
+
+    .donate-options input[type="number"] {
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="circle">
+    <div class="text">Inhale through your nose</div>
+  </div>
+  <div class="counter">Ready?</div>
+  <button class="button">Start 4-7-8</button>
+
+  <!-- Donation panel -->
+  <div class="donate-panel">
+    <h3>Support Me</h3>
+    <div class="donate-options">
+      <button onclick="donate(1)">$1</button>
+      <button onclick="donate(5)">$5</button>
+      <button onclick="donate(10)">$10</button>
+      <input type="number" id="customAmount" placeholder="Custom $" min="1">
+      <button onclick="donateCustom()">Donate</button>
+    </div>
+  </div>
+
+  <script>
+    const circle = document.querySelector('.circle');
+    const text = document.querySelector('.text');
+    const counter = document.querySelector('.counter');
+    const button = document.querySelector('.button');
+
+    let countdown;
+
+    function startCountdown(seconds) {
+      clearInterval(countdown);
+      let timeLeft = seconds;
+      counter.textContent = timeLeft;
+      countdown = setInterval(() => {
+        timeLeft--;
+        counter.textContent = timeLeft > 0 ? timeLeft : "";
+        if (timeLeft <= 0) {
+          clearInterval(countdown);
+        }
+      }, 1000);
+    }
+
+    function startBreathing() {
+      // Inhale (4s)
+      text.textContent = "Inhale through your nose";
+      circle.style.transition = "transform 4s ease-in-out";
+      circle.style.transform = "scale(1.4)";
+      startCountdown(4);
+
+      setTimeout(() => {
+        // Hold (7s)
+        text.textContent = "Hold your breath";
+        circle.style.transition = "transform 7s ease-in-out";
+        circle.style.transform = "scale(1.4)";
+        startCountdown(7);
+      }, 4000);
+
+      setTimeout(() => {
+        // Exhale (8s)
+        text.textContent = "Exhale through your mouth making a whoosh sound";
+        circle.style.transition = "transform 8s ease-in-out";
+        circle.style.transform = "scale(1)";
+        startCountdown(8);
+      }, 11000);
+    }
+
+    button.addEventListener('click', startBreathing);
+
+    // PayPal Donation functions
+    function donate(amount) {
+      window.open(`https://www.paypal.com/donate?business=ujjwal.mnnit@gmail.com&amount=${amount}&currency_code=USD`, '_blank');
+    }
+
+    function donateCustom() {
+      const amount = document.getElementById('customAmount').value;
+      if (amount && amount > 0) {
+        donate(amount);
+      } else {
+        alert("Please enter a valid amount");
+      }
+    }
+  </script>
+</body>
+</html>
