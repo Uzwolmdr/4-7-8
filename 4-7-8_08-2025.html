@@ -17,6 +17,10 @@
   }
   </script>
 
+  <!-- Google AdSense (replace with your own publisher ID) -->
+	 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1691321744656002"
+     crossorigin="anonymous"></script>
+
   <style>
     body {
       margin: 0;
@@ -102,7 +106,7 @@
       background-color: #1e3c72;
     }
 
-    /* Donation panel */
+    /* Donation panel (right side) */
     .donate-panel {
       position: fixed;
       top: 50%;
@@ -116,6 +120,7 @@
       font-size: 14px;
       text-align: center;
       width: 160px;
+      z-index: 1000;
     }
 
     .donate-panel h3 {
@@ -149,6 +154,31 @@
       text-align: center;
     }
 
+    /* Google Ads panel (left side) */
+    .ad-panel {
+      position: fixed;
+      top: 50%;
+      left: 20px;
+      transform: translateY(-50%);
+      width: 160px;
+      text-align: center;
+      z-index: 1000;
+    }
+
+    .fallback-ad {
+      background: #1e1e1e;
+      padding: 10px;
+      border-radius: 8px;
+      margin-top: 10px;
+      color: #00e6e6;
+      font-size: 12px;
+    }
+
+    .fallback-ad img {
+      max-width: 100%;
+      border-radius: 6px;
+    }
+
     /* Content Section */
     .content-section {
       max-width: 800px;
@@ -176,11 +206,17 @@
       .circle { margin-bottom: 60px; }
       .counter { font-size: 22px; }
       .button { font-size: 16px; padding: 12px 24px; }
+      .donate-panel, .ad-panel { width: 120px; }
     }
     @media (max-width: 480px) {
       .breathing-section { padding: 40px 10px 20px; }
       .circle { width: 70vw; height: 70vw; margin-bottom: 40px; }
-      .donate-panel { position: static; margin: 20px auto; transform: none; width: 90%; }
+      .donate-panel, .ad-panel { 
+        position: static; 
+        margin: 20px auto; 
+        transform: none; 
+        width: 90%; 
+      }
     }
   </style>
 </head>
@@ -229,7 +265,7 @@
     </div>
   </section>
 
-  <!-- Donation Panel -->
+  <!-- Donation Panel (Right) -->
   <div class="donate-panel">
     <h3>Support Me ❤️</h3>
     <p>If this breathing guide helped you relax, sleep, or calm anxiety, consider supporting me. Every contribution keeps this project alive!</p>
@@ -241,6 +277,29 @@
         <input type="number" id="customAmount" placeholder="Custom $" min="1">
         <button onclick="donateCustom()" class="donate-btn">Donate</button>
       </div>
+    </div>
+  </div>
+
+  <!-- Google Ad Panel (Left) -->
+  <div class="ad-panel">
+    <!-- Google AdSense Ad -->	
+	<!-- 4-7-8 -->
+	<ins class="adsbygoogle"
+		 style="display:block"
+		 data-ad-client="ca-pub-1691321744656002"
+		 data-ad-slot="9029919301"
+		 data-ad-format="auto"
+		 data-full-width-responsive="true"></ins>
+	<script>
+		 (adsbygoogle = window.adsbygoogle || []).push({});
+	</script>
+
+    <!-- Fallback Ad -->
+    <div class="fallback-ad">
+      <p>Sponsored</p>
+      <a href="https://paypal.me/UjjwalManandhar" target="_blank">
+        <img src="https://via.placeholder.com/160x600?text=Support+Me" alt="Fallback Ad">
+      </a>
     </div>
   </div>
 
