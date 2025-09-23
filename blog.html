@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <meta name="description" content="Blog - QuietMind breathing and mindfulness.">
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        body {
+            background: #111;
+            color: #eee;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            position: relative; /* Essential for positioning */
+        }
+        nav {
+            background: #1e1e1e;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+        section {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+        }
+        h1 {
+            color: #00e6e6;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        ul li {
+            margin: 10px 0;
+        }
+        ul li a {
+            color: #00e6e6;
+            text-decoration: none;
+        }
+        
+        /* Ad Panel Styling for Top-Left Position */
+        .ad-panel {
+            position: fixed; /* This is the key. It keeps the element in the same place. */
+            top: 20px;      /* Positions the ad 20 pixels from the top of the viewport. */
+            left: 20px;     /* Positions the ad 20 pixels from the left of the viewport. */
+            z-index: 1000;  /* Ensures the ad panel is on top of other content. */
+            padding: 10px;
+            border-radius: 5px;
+            background: #333;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        .fallback-ad {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="index2.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="blog.html">Blog</a>
+    <a href="contact.html">Contact</a>
+</nav>
+
+<section>
+    <h1>Blog</h1>
+    
+    <ul>
+        <li>
+            <a href="blog1.html">The Science of Deep Breathing for Stress Relief</a>
+        </li>
+        <li>
+            <a href="blog2.html">5 Daily Breathing Exercises to Calm Your Mind</a>
+        </li>
+        <li>
+            <a href="blog3.html">How Mindful Breathing Improves Sleep Quality</a>
+        </li>
+        <li>
+            <a href="blog4.html">Breathing Techniques for Anxiety and Panic Attacks</a>
+        </li>
+        <li>
+            <a href="blog5.html">Why Consistent Breathing Practice Improves Mental Clarity</a>
+        </li>
+    </ul>
+</section>
+
+<div class="ad-panel">
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-1691321744656002"
+         data-ad-slot="9029919301"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+
+    <div class="fallback-ad">
+        <p>Sponsored</p>
+        <a href="https://paypal.me/UjjwalManandhar" target="_blank">
+            <img src="https://via.placeholder.com/160x600?text=Support+Me" alt="Fallback Ad">
+        </a>
+    </div>
+</div>
+</body>
+</html>

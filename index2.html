@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>4-7-8 Breathing Technique for Anxiety, Insomnia & Relaxation</title>
+  <meta name="description" content="Learn the 4-7-8 breathing technique to reduce anxiety, improve sleep, and calm panic attacks. Try our interactive breathing guide now.">
+  <meta name="keywords" content="anxiety relief, insomnia treatment, breathing exercise, 4-7-8 technique, panic attack help, relaxation method">
+
+  <!-- ✅ Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZXXZD8D77L"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZXXZD8D77L');
+  </script>
+  <!-- ✅ End Google Analytics -->
+
+
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "4-7-8 Breathing Technique for Anxiety & Insomnia",
+    "description": "Learn the 4-7-8 breathing exercise to calm anxiety, improve sleep, and reduce panic attacks.",
+    "keywords": "4-7-8 breathing, anxiety relief, insomnia, sleeplessness, panic attack"
+  }
+  </script>
+
+  <!-- Google AdSense (replace with your own publisher ID) -->
+	 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1691321744656002"
+     crossorigin="anonymous"></script>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #111;
+      color: #eee;
+      box-sizing: border-box;
+    }
+
+    .breathing-section {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 100px 20px 40px;
+      box-sizing: border-box;
+      position: relative;
+    }
+
+    .circle {
+      width: min(80vw, 280px);
+      height: min(80vw, 280px);
+      border-radius: 50%;
+      background: radial-gradient(circle at 30% 30%, #1e3c72, #2a5298, #0a1a2f);
+      box-shadow: 
+        0 0 35px rgba(42, 82, 152, 0.9),
+        inset -12px -12px 25px rgba(255, 255, 255, 0.1),
+        inset 8px 8px 20px rgba(0, 0, 0, 0.4);
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-size: 20px;
+      padding: 20px;
+      transition: transform 4s ease-in-out;
+      margin-bottom: 100px;
+      overflow: hidden;
+      transform-origin: center center;
+    }
+
+    .circle::before {
+      content: "";
+      position: absolute;
+      top: -30%;
+      left: -30%;
+      width: 160%;
+      height: 160%;
+      background: radial-gradient(ellipse at top left, rgba(255,255,255,0.2), transparent 70%);
+      transform: rotate(-25deg);
+      pointer-events: none;
+    }
+
+    .text {
+      width: 80%;
+      word-wrap: break-word;
+      font-size: clamp(16px, 2vw, 20px);
+      z-index: 1;
+    }
+
+    .counter {
+      margin-bottom: 40px;
+      font-size: 28px;
+      color: #00e6e6;
+      font-weight: bold;
+      text-shadow: 0 0 10px #00e6e6, 0 0 20px #2a5298;
+    }
+
+    .button {
+      padding: 14px 32px;
+      background-color: #2a5298;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 18px;
+      transition: background-color 0.3s ease;
+    }
+
+    .button:hover {
+      background-color: #1e3c72;
+    }
+
+    /* Donation panel (right side) */
+    .donate-panel {
+      position: fixed;
+      top: 50%;
+      right: 20px;
+      transform: translateY(-50%);
+      background: #1e1e1e;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0, 230, 230, 0.4);
+      color: white;
+      font-size: 14px;
+      text-align: center;
+      width: 160px;
+      z-index: 1000;
+    }
+
+    .donate-panel h3 {
+      margin-top: 0;
+      margin-bottom: 10px;
+      font-size: 16px;
+      color: #00e6e6;
+    }
+
+    .donate-options button,
+    .donate-options input[type="number"] {
+      margin: 5px 0;
+      width: 100%;
+      padding: 8px;
+      border-radius: 6px;
+      border: none;
+      font-size: 14px;
+    }
+
+    .donate-options button {
+      background: #2a5298;
+      color: white;
+      cursor: pointer;
+    }
+
+    .donate-options button:hover {
+      background: #1e3c72;
+    }
+
+    .donate-options input[type="number"] {
+      text-align: center;
+    }
+
+    /* Google Ads panel (left side) */
+    .ad-panel {
+      position: fixed;
+      top: 50%;
+      left: 20px;
+      transform: translateY(-50%);
+      width: 160px;
+      text-align: center;
+      z-index: 1000;
+    }
+
+    .fallback-ad {
+      background: #1e1e1e;
+      padding: 10px;
+      border-radius: 8px;
+      margin-top: 10px;
+      color: #00e6e6;
+      font-size: 12px;
+    }
+
+    .fallback-ad img {
+      max-width: 100%;
+      border-radius: 6px;
+    }
+
+    /* Content Section */
+    .content-section {
+      max-width: 800px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    .content-section h1, h2, h3 {
+      color: #00e6e6;
+    }
+
+    .faq {
+      margin-top: 20px;
+    }
+    .faq h3 {
+      margin-bottom: 10px;
+    }
+    .faq p {
+      margin-bottom: 15px;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .breathing-section { padding: 60px 20px 30px; }
+      .circle { margin-bottom: 60px; }
+      .counter { font-size: 22px; }
+      .button { font-size: 16px; padding: 12px 24px; }
+      .donate-panel, .ad-panel { width: 120px; }
+    }
+    @media (max-width: 480px) {
+      .breathing-section { padding: 40px 10px 20px; }
+      .circle { width: 70vw; height: 70vw; margin-bottom: 40px; }
+      .donate-panel, .ad-panel { 
+        position: static; 
+        margin: 20px auto; 
+        transform: none; 
+        width: 90%; 
+      }
+    }
+  </style>
+</head>
+<body>
+<nav style="background:#1e1e1e;padding:10px;text-align:center;">
+  <a href="index2.html" style="color:white;margin:0 15px;text-decoration:none;">Home</a>
+  <a href="about.html" style="color:white;margin:0 15px;text-decoration:none;">About</a>
+  <a href="blog.html" style="color:white;margin:0 15px;text-decoration:none;">Blog</a>
+  <a href="contact.html" style="color:white;margin:0 15px;text-decoration:none;">Contact</a>
+</nav>
+
+  <!-- Breathing Section -->
+  <section class="breathing-section">
+    <div class="circle">
+      <div class="text">Inhale through your nose</div>
+    </div>
+    <div class="counter">Ready?</div>
+    <div>
+      <button class="button" id="startBtn">Start 4-7-8</button>
+    </div>
+  </section>
+
+  <!-- SEO Content Section -->
+  <section class="content-section">
+    <h1>4-7-8 Breathing Technique</h1>
+    <p>The 4-7-8 breathing technique is a simple but powerful exercise to calm anxiety, fight insomnia, and control panic attacks. By focusing on your breath, you relax your body and mind naturally.</p>
+
+    <h2>Benefits of 4-7-8 Breathing</h2>
+    <ul>
+      <li>Helps with <strong>anxiety</strong> and stress relief</li>
+      <li>Improves <strong>sleep</strong> and fights <strong>insomnia</strong></li>
+      <li>Useful for <strong>panic attacks</strong> and emotional regulation</li>
+    </ul>
+
+    <h2>How to Do the 4-7-8 Technique</h2>
+    <ol>
+      <li>Inhale quietly through your nose for 4 seconds.</li>
+      <li>Hold your breath for 7 seconds.</li>
+      <li>Exhale completely through your mouth with a whoosh sound for 8 seconds.</li>
+      <li>Repeat the cycle 4 times.</li>
+    </ol>
+
+    <div class="faq">
+      <h2>Frequently Asked Questions</h2>
+      <h3>Does 4-7-8 breathing really help anxiety?</h3>
+      <p>Yes, this method can calm your nervous system and reduce stress hormones, making it easier to manage anxiety.</p>
+
+      <h3>How many times should I do 4-7-8 breathing before sleep?</h3>
+      <p>Most experts recommend starting with 4 cycles before bed. Over time, you can increase the number of cycles.</p>
+
+      <h3>Is it safe to do daily?</h3>
+      <p>Yes, it’s safe to practice daily. In fact, consistency helps you get the most benefits.</p>
+    </div>
+  </section>
+
+  <!-- Donation Panel (Right) -->
+  <div class="donate-panel">
+    <h3>Support Me ❤️</h3>
+    <p>If this breathing guide helped you relax, sleep, or calm anxiety, consider supporting me. Every contribution keeps this project alive!</p>
+    <div class="donate-options">
+      <button onclick="donate(1)" class="donate-btn">$1</button>
+      <button onclick="donate(5)" class="donate-btn">$5</button>
+      <button onclick="donate(10)" class="donate-btn">$10</button>
+      <div class="custom-donate">
+        <input type="number" id="customAmount" placeholder="Custom $" min="1">
+        <button onclick="donateCustom()" class="donate-btn">Donate</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Google Ad Panel (Left) -->
+  <div class="ad-panel">
+    <!-- Google AdSense Ad -->	
+	<!-- 4-7-8 -->
+	<ins class="adsbygoogle"
+		 style="display:block"
+		 data-ad-client="ca-pub-1691321744656002"
+		 data-ad-slot="9029919301"
+		 data-ad-format="auto"
+		 data-full-width-responsive="true"></ins>
+	<script>
+		 (adsbygoogle = window.adsbygoogle || []).push({});
+	</script>
+
+    <!-- Fallback Ad -->
+    <div class="fallback-ad">
+      <p>Sponsored</p>
+      <a href="https://paypal.me/UjjwalManandhar" target="_blank">
+        <img src="https://via.placeholder.com/160x600?text=Support+Me" alt="Fallback Ad">
+      </a>
+    </div>
+  </div>
+
+  <!-- Audio Element -->
+  <audio id="breathingAudio" src="audio/43801_tibetan-bowl-26240.mp3"></audio>
+
+  <script>
+    const circle = document.querySelector('.circle');
+    const text = document.querySelector('.text');
+    const counter = document.querySelector('.counter');
+    const startBtn = document.getElementById('startBtn');
+    const audio = document.getElementById('breathingAudio');
+
+    let countdown;
+    let cycleTimeouts = [];
+    let currentPhase = null;
+    let remainingTime = 0;
+    let isPaused = false;
+    let hasStarted = false;
+
+    const phases = [
+      { label: "Inhale through your nose", duration: 4, scale: 1.4 },
+      { label: "Hold your breath", duration: 7, scale: 1.45 },
+      { label: "Exhale through your mouth making a whoosh sound", duration: 8, scale: 1 }
+    ];
+
+    let phaseIndex = 0;
+
+    function startCountdown(seconds) {
+      clearInterval(countdown);
+      remainingTime = seconds;
+      counter.textContent = remainingTime;
+
+      countdown = setInterval(() => {
+        if (!isPaused) {
+          remainingTime--;
+          counter.textContent = remainingTime > 0 ? remainingTime : "";
+          if (remainingTime <= 0) clearInterval(countdown);
+        }
+      }, 1000);
+    }
+
+    function runPhase(index) {
+      if (isPaused) return;
+
+      const phase = phases[index];
+      currentPhase = phase;
+
+      text.textContent = phase.label;
+      circle.style.transition = `transform ${phase.duration}s ease-in-out`;
+      circle.style.transform = `scale(${phase.scale})`;
+
+      startCountdown(phase.duration);
+
+      const timeout = setTimeout(() => {
+        phaseIndex = (phaseIndex + 1) % phases.length;
+        runPhase(phaseIndex);
+      }, phase.duration * 1000);
+
+      cycleTimeouts.push(timeout);
+    }
+
+    function startBreathing() {
+      if (!hasStarted) {
+        hasStarted = true;
+        startBtn.textContent = "Pause";
+        audio.play();
+        phaseIndex = 0;
+        runPhase(phaseIndex);
+      } else if (!isPaused) {
+        // Pause
+        isPaused = true;
+        startBtn.textContent = "Resume";
+        clearInterval(countdown);
+        cycleTimeouts.forEach(t => clearTimeout(t));
+        audio.pause();
+        const computedStyle = window.getComputedStyle(circle);
+        circle.style.transition = "";
+        circle.style.transform = computedStyle.transform;
+      } else {
+        // Resume
+        isPaused = false;
+        startBtn.textContent = "Pause";
+        audio.play();
+        const phase = currentPhase;
+        circle.style.transition = `transform ${remainingTime}s linear`;
+        circle.style.transform = `scale(${phase.scale})`;
+        startCountdown(remainingTime);
+
+        const timeout = setTimeout(() => {
+          phaseIndex = (phaseIndex + 1) % phases.length;
+          runPhase(phaseIndex);
+        }, remainingTime * 1000);
+
+        cycleTimeouts = [timeout];
+      }
+    }
+
+    startBtn.addEventListener('click', startBreathing);
+
+    // PayPal.Me donation functions
+    const paypalMeLink = "https://paypal.me/UjjwalManandhar";
+
+    function donate(amount) {
+      window.open(`${paypalMeLink}/${amount}`, '_blank');
+    }
+
+    function donateCustom() {
+      const amount = document.getElementById('customAmount').value;
+      if (amount && amount > 0) {
+        donate(amount);
+      } else {
+        alert("Please enter a valid amount");
+      }
+    }
+  </script>
+</body>
+</html>
