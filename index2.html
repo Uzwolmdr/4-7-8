@@ -7,6 +7,14 @@
   <meta name="description" content="Learn the 4-7-8 breathing technique to reduce anxiety, improve sleep, and calm panic attacks. Try our interactive breathing guide now.">
   <meta name="keywords" content="anxiety relief, insomnia treatment, breathing exercise, 4-7-8 technique, panic attack help, relaxation method">
 
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-K542JGMN');</script>
+  <!-- End Google Tag Manager -->
+
   <!-- ✅ Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZXXZD8D77L"></script>
   <script>
@@ -233,6 +241,10 @@
   </style>
 </head>
 <body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K542JGMN"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 <nav style="background:#1e1e1e;padding:10px;text-align:center;">
   <a href="index2.html" style="color:white;margin:0 15px;text-decoration:none;">Home</a>
   <a href="about.html" style="color:white;margin:0 15px;text-decoration:none;">About</a>
@@ -289,12 +301,12 @@
     <h3>Support Me ❤️</h3>
     <p>If this breathing guide helped you relax, sleep, or calm anxiety, consider supporting me. Every contribution keeps this project alive!</p>
     <div class="donate-options">
-      <button onclick="donate(1)" class="donate-btn">$1</button>
-      <button onclick="donate(5)" class="donate-btn">$5</button>
-      <button onclick="donate(10)" class="donate-btn">$10</button>
+      <button onclick="donate(1)" class="donate-btn" id="support-me-btn1">$1</button>
+      <button onclick="donate(5)" class="donate-btn" id="support-me-btn5">$5</button>
+      <button onclick="donate(10)" class="donate-btn" id="support-me-btn10">$10</button>
       <div class="custom-donate">
         <input type="number" id="customAmount" placeholder="Custom $" min="1">
-        <button onclick="donateCustom()" class="donate-btn">Donate</button>
+        <button onclick="donateCustom()" class="donate-btn" id="support-me-btnx">Donate</button>
       </div>
     </div>
   </div>
