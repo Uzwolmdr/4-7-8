@@ -3,455 +3,203 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>4-7-8 Breathing Technique for Anxiety, Insomnia & Relaxation</title>
-  <meta name="description" content="Learn the 4-7-8 breathing technique to reduce anxiety, improve sleep, and calm panic attacks. Try our interactive breathing guide now.">
-  <meta name="keywords" content="anxiety relief, insomnia treatment, breathing exercise, 4-7-8 technique, panic attack help, relaxation method">
-
-  <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-PCXQD8DT');</script>
-<!-- End Google Tag Manager -->
-
-  <!-- ✅ Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZXXZD8D77L"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-ZXXZD8D77L');
-  </script>
-  <!-- ✅ End Google Analytics -->
-
-
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "4-7-8 Breathing Technique for Anxiety & Insomnia",
-    "description": "Learn the 4-7-8 breathing exercise to calm anxiety, improve sleep, and reduce panic attacks.",
-    "keywords": "4-7-8 breathing, anxiety relief, insomnia, sleeplessness, panic attack"
-  }
-  </script>
-
-  <!-- Google AdSense (replace with your own publisher ID) -->
-	 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1691321744656002"
-     crossorigin="anonymous"></script>
-
+  <title>4-7-8 Breathing Exercise | Relax & Reduce Anxiety</title>
+  <meta name="description" content="Practice the 4-7-8 breathing technique with a guided animation and audio to relax, reduce anxiety, and improve sleep.">
   <style>
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: #111;
-      color: #eee;
-      box-sizing: border-box;
+      background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364);
+      color: white;
+      text-align: center;
+      overflow-x: hidden;
+    }
+
+    h1 {
+      margin-top: 20px;
+      font-size: 1.8rem;
     }
 
     .breathing-section {
-      height: 100vh;
+      position: relative;
+      margin-top: 40px;
       display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 70vh;
       flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 100px 20px 40px;
-      box-sizing: border-box;
-      position: relative;
-    }
-
-    .circle {
-      width: min(80vw, 280px);
-      height: min(80vw, 280px);
-      border-radius: 50%;
-      background: radial-gradient(circle at 30% 30%, #1e3c72, #2a5298, #0a1a2f);
-      box-shadow: 
-        0 0 35px rgba(42, 82, 152, 0.9),
-        inset -12px -12px 25px rgba(255, 255, 255, 0.1),
-        inset 8px 8px 20px rgba(0, 0, 0, 0.4);
-      position: relative;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      color: white;
-      font-size: 20px;
-      padding: 20px;
-      transition: transform 4s ease-in-out;
-      margin-bottom: 100px;
-      overflow: hidden;
-      transform-origin: center center;
-    }
-
-    .circle::before {
-      content: "";
-      position: absolute;
-      top: -30%;
-      left: -30%;
-      width: 160%;
-      height: 160%;
-      background: radial-gradient(ellipse at top left, rgba(255,255,255,0.2), transparent 70%);
-      transform: rotate(-25deg);
-      pointer-events: none;
-    }
-
-    .text {
-      width: 80%;
-      word-wrap: break-word;
-      font-size: clamp(16px, 2vw, 20px);
-      z-index: 1;
     }
 
     .counter {
-      margin-bottom: 40px;
-      font-size: 28px;
-      color: #00e6e6;
+      position: absolute;
+      top: 10px;
+      width: 100%;
+      font-size: 1.2rem;
       font-weight: bold;
-      text-shadow: 0 0 10px #00e6e6, 0 0 20px #2a5298;
     }
 
-    .button {
-      padding: 14px 32px;
-      background-color: #2a5298;
-      color: white;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      font-size: 18px;
-      transition: background-color 0.3s ease;
+    .circle {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      background: radial-gradient(circle, #4facfe, #00f2fe);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 4s ease-in-out;
     }
 
-    .button:hover {
-      background-color: #1e3c72;
+    .instruction {
+      margin-top: 20px;
+      font-size: 1.2rem;
+      font-weight: bold;
     }
 
-    /* Donation panel (right side) */
+    /* Donation panel */
     .donate-panel {
       position: fixed;
-      top: 50%;
-      right: 20px;
-      transform: translateY(-50%);
+      bottom: 10px;
+      right: 10px;
+      left: 10px;
+      max-width: 320px;
+      margin: auto;
       background: #1e1e1e;
-      padding: 20px;
-      border-radius: 12px;
-      box-shadow: 0 0 15px rgba(0, 230, 230, 0.4);
+      border-radius: 16px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      overflow: hidden;
       color: white;
-      font-size: 14px;
-      text-align: center;
-      width: 160px;
-      z-index: 1000;
+      font-family: sans-serif;
+      transition: max-height 0.3s ease, transform 0.3s ease;
+      z-index: 2000;
     }
 
-    .donate-panel h3 {
-      margin-top: 0;
-      margin-bottom: 10px;
+    .donate-header {
+      background: #2a2a2a;
+      padding: 10px 15px;
       font-size: 16px;
-      color: #00e6e6;
-    }
-
-    .donate-options button,
-    .donate-options input[type="number"] {
-      margin: 5px 0;
-      width: 100%;
-      padding: 8px;
-      border-radius: 6px;
-      border: none;
-      font-size: 14px;
-    }
-
-    .donate-options button {
-      background: #2a5298;
-      color: white;
+      font-weight: bold;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
       cursor: pointer;
     }
 
-    .donate-options button:hover {
-      background: #1e3c72;
+    .donate-content {
+      padding: 15px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
     }
 
-    .donate-options input[type="number"] {
-      text-align: center;
-    }
-
-    /* Google Ads panel (left side) */
-    .ad-panel {
-      position: fixed;
-      top: 50%;
-      left: 20px;
-      transform: translateY(-50%);
-      width: 160px;
-      text-align: center;
-      z-index: 1000;
-    }
-
-    .fallback-ad {
-      background: #1e1e1e;
+    .donate-content button {
+      background: #ff5a5f;
+      border: none;
+      color: white;
+      font-weight: bold;
       padding: 10px;
       border-radius: 8px;
-      margin-top: 10px;
-      color: #00e6e6;
-      font-size: 12px;
+      cursor: pointer;
+      transition: background 0.2s;
     }
 
-    .fallback-ad img {
-      max-width: 100%;
-      border-radius: 6px;
+    .donate-content button:hover {
+      background: #e14c50;
     }
 
-    /* Content Section */
-    .content-section {
-      max-width: 800px;
-      margin: auto;
-      padding: 40px 20px;
+    .donate-panel.collapsed {
+      max-height: 50px;
+    }
+    .donate-panel.collapsed .donate-content {
+      display: none;
     }
 
-    .content-section h1, h2, h3 {
-      color: #00e6e6;
+    .toggle-icon {
+      transition: transform 0.3s ease;
+    }
+    .donate-panel.collapsed .toggle-icon {
+      transform: rotate(180deg);
     }
 
-    .faq {
-      margin-top: 20px;
-    }
-    .faq h3 {
-      margin-bottom: 10px;
-    }
-    .faq p {
-      margin-bottom: 15px;
-    }
-
-    /* Responsive adjustments */
-    @media (max-width: 768px) {
-      .breathing-section { padding: 60px 20px 30px; }
-      .circle { margin-bottom: 60px; }
-      .counter { font-size: 22px; }
-      .button { font-size: 16px; padding: 12px 24px; }
-      .donate-panel, .ad-panel { width: 120px; }
-    }
     @media (max-width: 480px) {
-      .breathing-section { padding: 40px 10px 20px; }
-      .circle { width: 70vw; height: 70vw; margin-bottom: 40px; }
-      .donate-panel, .ad-panel { 
-        position: static; 
-        margin: 20px auto; 
-        transform: none; 
-        width: 90%; 
+      .circle {
+        width: 60vw;
+        height: 60vw;
       }
     }
   </style>
 </head>
 <body>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PCXQD8DT"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-<nav style="background:#1e1e1e;padding:10px;text-align:center;">
-  <a href="index2.html" style="color:white;margin:0 15px;text-decoration:none;">Home</a>
-  <a href="about.html" style="color:white;margin:0 15px;text-decoration:none;">About</a>
-  <a href="blog.html" style="color:white;margin:0 15px;text-decoration:none;">Blog</a>
-  <a href="contact.html" style="color:white;margin:0 15px;text-decoration:none;">Contact</a>
-</nav>
+  <h1>4-7-8 Breathing Technique</h1>
 
-  <!-- Breathing Section -->
-  <section class="breathing-section">
-    <div class="circle">
-      <div class="text">Inhale through your nose</div>
+  <div class="breathing-section">
+    <div class="counter" id="counter">Get ready...</div>
+    <div class="circle" id="circle"></div>
+    <div class="instruction" id="instruction">Press Start</div>
+  </div>
+
+  <!-- Collapsible Donation Panel -->
+  <div class="donate-panel collapsed" id="donatePanel">
+    <div class="donate-header" onclick="toggleDonate()">
+      <span>❤️ Support Me</span>
+      <span class="toggle-icon">▲</span>
     </div>
-    <div class="counter">Ready?</div>
-    <div>
-      <button class="button" id="startBtn">Start 4-7-8</button>
-    </div>
-  </section>
-
-  <!-- SEO Content Section -->
-  <section class="content-section">
-    <h1>4-7-8 Breathing Technique</h1>
-    <p>The 4-7-8 breathing technique is a simple but powerful exercise to calm anxiety, fight insomnia, and control panic attacks. By focusing on your breath, you relax your body and mind naturally.</p>
-
-    <h2>Benefits of 4-7-8 Breathing</h2>
-    <ul>
-      <li>Helps with <strong>anxiety</strong> and stress relief</li>
-      <li>Improves <strong>sleep</strong> and fights <strong>insomnia</strong></li>
-      <li>Useful for <strong>panic attacks</strong> and emotional regulation</li>
-    </ul>
-
-    <h2>How to Do the 4-7-8 Technique</h2>
-    <ol>
-      <li>Inhale quietly through your nose for 4 seconds.</li>
-      <li>Hold your breath for 7 seconds.</li>
-      <li>Exhale completely through your mouth with a whoosh sound for 8 seconds.</li>
-      <li>Repeat the cycle 4 times.</li>
-    </ol>
-
-    <div class="faq">
-      <h2>Frequently Asked Questions</h2>
-      <h3>Does 4-7-8 breathing really help anxiety?</h3>
-      <p>Yes, this method can calm your nervous system and reduce stress hormones, making it easier to manage anxiety.</p>
-
-      <h3>How many times should I do 4-7-8 breathing before sleep?</h3>
-      <p>Most experts recommend starting with 4 cycles before bed. Over time, you can increase the number of cycles.</p>
-
-      <h3>Is it safe to do daily?</h3>
-      <p>Yes, it’s safe to practice daily. In fact, consistency helps you get the most benefits.</p>
-    </div>
-  </section>
-
-  <!-- Donation Panel (Right) -->
-  <div class="donate-panel">
-    <h3>Support Me ❤️</h3>
-    <p>If this breathing guide helped you relax, sleep, or calm anxiety, consider supporting me. Every contribution keeps this project alive!</p>
-    <div class="donate-options">
-      <button onclick="donate(1)" class="donate-btn" id="support-me-btn1">$1</button>
-      <button onclick="donate(5)" class="donate-btn" id="support-me-btn5">$5</button>
-      <button onclick="donate(10)" class="donate-btn" id="support-me-btn10">$10</button>
-      <div class="custom-donate">
-        <input type="number" id="customAmount" placeholder="Custom $" min="1">
-        <button onclick="donateCustom()" class="donate-btn" id="support-me-btnx">Donate</button>
-      </div>
+    <div class="donate-content">
+      <h3>If this helped you 🙏</h3>
+      <p>Choose a donation amount:</p>
+      <button>$1</button>
+      <button>$5</button>
+      <button>$10</button>
+      <button>Custom</button>
     </div>
   </div>
 
-  <!-- Google Ad Panel (Left) -->
-  <div class="ad-panel">
-    <!-- Google AdSense Ad -->	
-	<!-- 4-7-8 -->
-	<ins class="adsbygoogle"
-		 style="display:block"
-		 data-ad-client="ca-pub-1691321744656002"
-		 data-ad-slot="9029919301"
-		 data-ad-format="auto"
-		 data-full-width-responsive="true"></ins>
-	<script>
-		 (adsbygoogle = window.adsbygoogle || []).push({});
-	</script>
-
-    <!-- Fallback Ad -->
-    <div class="fallback-ad">
-      <p>Sponsored</p>
-      <a href="https://paypal.me/UjjwalManandhar" target="_blank">
-        <img src="https://via.placeholder.com/160x600?text=Support+Me" alt="Fallback Ad">
-      </a>
-    </div>
-  </div>
-
-  <!-- Audio Element -->
-  <audio id="breathingAudio" src="audio/43801_tibetan-bowl-26240.mp3"></audio>
+  <!-- Background Music -->
+  <audio id="bg-music" loop>
+    <source src="path/to/your/tibetan-bowls-and-rain.mp3" type="audio/mpeg">
+  </audio>
 
   <script>
-    const circle = document.querySelector('.circle');
-    const text = document.querySelector('.text');
-    const counter = document.querySelector('.counter');
-    const startBtn = document.getElementById('startBtn');
-    const audio = document.getElementById('breathingAudio');
-
-    let countdown;
-    let cycleTimeouts = [];
-    let currentPhase = null;
-    let remainingTime = 0;
-    let isPaused = false;
-    let hasStarted = false;
+    const circle = document.getElementById("circle");
+    const instruction = document.getElementById("instruction");
+    const counter = document.getElementById("counter");
+    const bgMusic = document.getElementById("bg-music");
 
     const phases = [
-      { label: "Inhale through your nose", duration: 4, scale: 1.4 },
-      { label: "Hold your breath", duration: 7, scale: 1.45 },
+      { label: "Inhale through your nose", duration: 4, scale: window.innerWidth < 480 ? 1.2 : 1.4 },
+      { label: "Hold your breath", duration: 7, scale: window.innerWidth < 480 ? 1.25 : 1.45 },
       { label: "Exhale through your mouth making a whoosh sound", duration: 8, scale: 1 }
     ];
 
     let phaseIndex = 0;
+    let timeLeft = phases[phaseIndex].duration;
 
-    function startCountdown(seconds) {
-      clearInterval(countdown);
-      remainingTime = seconds;
-      counter.textContent = remainingTime;
+    function startBreathing() {
+      bgMusic.play().catch(() => {}); // try play, ignore block
+      instruction.textContent = phases[phaseIndex].label;
+      circle.style.transform = `scale(${phases[phaseIndex].scale})`;
 
-      countdown = setInterval(() => {
-        if (!isPaused) {
-          remainingTime--;
-          counter.textContent = remainingTime > 0 ? remainingTime : "";
-          if (remainingTime <= 0) clearInterval(countdown);
+      counter.textContent = timeLeft;
+
+      const timer = setInterval(() => {
+        timeLeft--;
+        if (timeLeft > 0) {
+          counter.textContent = timeLeft;
+        } else {
+          phaseIndex = (phaseIndex + 1) % phases.length;
+          timeLeft = phases[phaseIndex].duration;
+          instruction.textContent = phases[phaseIndex].label;
+          circle.style.transform = `scale(${phases[phaseIndex].scale})`;
+          counter.textContent = timeLeft;
         }
       }, 1000);
     }
 
-    function runPhase(index) {
-      if (isPaused) return;
+    circle.addEventListener("click", startBreathing);
 
-      const phase = phases[index];
-      currentPhase = phase;
-
-      text.textContent = phase.label;
-      circle.style.transition = `transform ${phase.duration}s ease-in-out`;
-      circle.style.transform = `scale(${phase.scale})`;
-
-      startCountdown(phase.duration);
-
-      const timeout = setTimeout(() => {
-        phaseIndex = (phaseIndex + 1) % phases.length;
-        runPhase(phaseIndex);
-      }, phase.duration * 1000);
-
-      cycleTimeouts.push(timeout);
-    }
-
-    function startBreathing() {
-      if (!hasStarted) {
-        hasStarted = true;
-        startBtn.textContent = "Pause";
-        audio.play();
-        phaseIndex = 0;
-        runPhase(phaseIndex);
-      } else if (!isPaused) {
-        // Pause
-        isPaused = true;
-        startBtn.textContent = "Resume";
-        clearInterval(countdown);
-        cycleTimeouts.forEach(t => clearTimeout(t));
-        audio.pause();
-        const computedStyle = window.getComputedStyle(circle);
-        circle.style.transition = "";
-        circle.style.transform = computedStyle.transform;
-      } else {
-        // Resume
-        isPaused = false;
-        startBtn.textContent = "Pause";
-        audio.play();
-        const phase = currentPhase;
-        circle.style.transition = `transform ${remainingTime}s linear`;
-        circle.style.transform = `scale(${phase.scale})`;
-        startCountdown(remainingTime);
-
-        const timeout = setTimeout(() => {
-          phaseIndex = (phaseIndex + 1) % phases.length;
-          runPhase(phaseIndex);
-        }, remainingTime * 1000);
-
-        cycleTimeouts = [timeout];
-      }
-    }
-
-    startBtn.addEventListener('click', startBreathing);
-
-    // PayPal.Me donation functions
-    const paypalMeLink = "https://paypal.me/UjjwalManandhar";
-
-    function donate(amount) {
-      window.open(`${paypalMeLink}/${amount}`, '_blank');
-    }
-
-    function donateCustom() {
-      const amount = document.getElementById('customAmount').value;
-      if (amount && amount > 0) {
-        donate(amount);
-      } else {
-        alert("Please enter a valid amount");
-      }
+    // Collapsible donation panel
+    function toggleDonate() {
+      document.getElementById("donatePanel").classList.toggle("collapsed");
     }
   </script>
-  <footer style="background:#1e1e1e; color:#eee; text-align:center; padding:15px; margin-top:40px;">
-  <p>&copy; 2025 https://quietmind.fun/ | 
-    <a href="PrivacyPolicy.html" style="color:#00e6e6; text-decoration:none;">Privacy Policy</a> | 
-    <a href="contact.html" style="color:#00e6e6; text-decoration:none;">Contact</a>
-  </p>
-</footer>
 </body>
 </html>
