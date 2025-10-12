@@ -1,169 +1,262 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog</title>
-    <meta name="description" content="Blog - QuietMind breathing and mindfulness.">
-    <link rel="stylesheet" href="styles.css">
-
-    <style>
-        body {
-            background: #111;
-            color: #eee;
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            position: relative; /* Essential for positioning */
-        }
-        nav {
-            background: #1e1e1e;
-            padding: 10px;
-            text-align: center;
-        }
-        nav a {
-            color: white;
-            margin: 0 15px;
-            text-decoration: none;
-        }
-        section {
-            max-width: 800px;
-            margin: auto;
-            padding: 20px;
-        }
-        h1 {
-            color: #00e6e6;
-        }
-        ul {
-            list-style: none;
-            padding: 0;
-        }
-        ul li {
-            margin: 10px 0;
-        }
-        ul li a {
-            color: #00e6e6;
-            text-decoration: none;
-        }
-        
-        /* Ad Panel Styling for Top-Left Position */
-        .ad-panel {
-            position: fixed; /* This is the key. It keeps the element in the same place. */
-            top: 20px;      /* Positions the ad 20 pixels from the top of the viewport. */
-            left: 20px;     /* Positions the ad 20 pixels from the left of the viewport. */
-            z-index: 1000;  /* Ensures the ad panel is on top of other content. */
-            padding: 10px;
-            border-radius: 5px;
-            background: #333;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-        }
-        .fallback-ad {
-            text-align: center;
-        }
-    </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Blog | QuietMind</title>
+  <meta name="description" content="Explore 22 in-depth blog articles on breathing, mindfulness, anxiety relief, sleep, mental health, and more." />
+  <style>
+    :root{--bg:#0f0f11;--card:#161619;--accent:#00e6e6;--muted:#bfc7c7}
+    body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:#eee}
+    nav{background:#151515;padding:14px;text-align:center;position:sticky;top:0;z-index:1000}
+    nav a{color:#fff;margin:0 12px;text-decoration:none;font-weight:600}
+    nav a:hover{color:var(--accent)}
+    .hero{padding:40px 20px;text-align:center;background:linear-gradient(180deg,#131314, #18181a)}
+    .hero h1{color:var(--accent);margin:0;font-size:2.1rem}
+    .hero p{color:var(--muted);max-width:760px;margin:8px auto 0;line-height:1.6}
+    /* video */
+    .video-wrap{display:flex;justify-content:center;padding:24px 20px}
+    .video-container{width:90%;max-width:900px;aspect-ratio:16/9;border-radius:12px;overflow:hidden;box-shadow:0 8px 30px rgba(0,0,0,0.6)}
+    .video-container iframe{width:100%;height:100%;border:0;display:block}
+    /* grid */
+    .blog-grid{display:grid;grid-template-columns:repeat(2,minmax(300px,1fr));gap:22px;max-width:1200px;margin:36px auto;padding:0 20px}
+    @media(max-width:880px){.blog-grid{grid-template-columns:1fr}}
+    .card{background:var(--card);border-radius:12px;overflow:hidden;display:flex;flex-direction:column;transition:transform .22s,box-shadow .22s}
+    .card:hover{transform:translateY(-6px);box-shadow:0 20px 40px rgba(0,0,0,0.6)}
+    .card img{width:100%;height:220px;object-fit:cover;display:block}
+    .card .content{padding:16px;display:flex;flex-direction:column;flex:1}
+    .card h3{margin:0 0 8px;color:var(--accent);font-size:1.05rem}
+    .card p{margin:0;color:var(--muted);line-height:1.5;font-size:0.95rem;flex:1}
+    .read{margin-top:12px;align-self:flex-start;padding:8px 12px;background:var(--accent);color:#061015;text-decoration:none;border-radius:8px;font-weight:700}
+    footer{background:#121213;padding:18px;text-align:center;color:#bbb;margin-top:40px}
+    footer a{color:var(--accent);text-decoration:none}
+  </style>
 </head>
 <body>
-
 <nav>
-    <a href="index2.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="blog.html">Blog</a>
-    <a href="contact.html">Contact</a>
+  <a href="index2.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="blog.html">Blog <span style="background:var(--accent);color:#051012;padding:2px 8px;border-radius:999px;margin-left:6px;font-weight:800">22</span></a>
+  <a href="contact.html">Contact</a>
 </nav>
 
-<section>
-    <h1>Blog</h1>
-    
-    <ul>
-        <li>
-            <a href="blog1.html">The Science of Deep Breathing for Stress Relief</a>
-        </li>
-        <li>
-            <a href="blog2.html">5 Daily Breathing Exercises to Calm Your Mind</a>
-        </li>
-        <li>
-            <a href="blog3.html">How Mindful Breathing Improves Sleep Quality</a>
-        </li>
-        <li>
-            <a href="blog4.html">Breathing Techniques for Anxiety and Panic Attacks</a>
-        </li>
-        <li>
-            <a href="blog6.html">The Power of Mindfulness Meditation for Anxiety</a>
-        </li>
-		<li>
-            <a href="blog7.html">Understanding and Managing Social Anxiety</a>
-        </li>
-		<li>
-            <a href="blog8.html">The Connection Between Gut Health and Anxiety</a>
-        </li>
-		<li>
-            <a href="blog9.html">Journaling as a Tool for Anxiety Relief</a>
-        </li>
-		<li>
-            <a href="blog10.html">The Role of Physical Exercise in Mental Health</a>
-        </li>
-		<li>
-            <a href="blog11.html">The Importance of Sleep for Mental Clarity</a>
-        </li>
-		<li>
-            <a href="blog12.html">The 5-4-3-2-1 Grounding Technique</a>
-        </li>
-		<li>
-            <a href="blog13.html">The Power of Positive Affirmations for a Calmer Mind</a>
-        </li>
-		<li>
-            <a href="blog14.html">How to Create a "Mindfulness Toolkit</a>
-        </li>
-		<li>
-            <a href="blog15.html">Overcoming Anxious Thoughts Through Cognitive Restructuring</a>
-        </li>
-		<li>
-            <a href="blog16.html">The Benefits of Yoga for Mindful Movement and Anxiety</a>
-        </li>
-		<li>
-            <a href="blog17.html">Building Resilience: How to Thrive in Uncertainty</a>
-        </li>
-		<li>
-            <a href="blog18.html">The Power of Sound and Music for Anxiety Relief</a>
-        </li>
-		<li>
-            <a href="blog19.html">Finding Peace in Nature: The Healing Power of the Outdoors</a>
-        </li>
-		<li>
-            <a href="blog20.html">The Benefits of Decluttering for a Calm Mind</a>
-        </li>
-		<li>
-            <a href="blog21.html">Managing Anxiety with a Consistent Routine</a>
-        </li>
-		<li>
-            <a href="blog22.html">The Role of Nutrition in Anxiety and Mental Health</a>
-        </li>
-    </ul>
+<section class="hero">
+  <h1>QuietMind — Blog</h1>
+  <p>22 practical, well-researched articles about breathing techniques, mindfulness, sleep, anxiety management, nutrition and lifestyle practices to help you stay calm, focused and healthy.</p>
 </section>
 
-<div class="ad-panel">
-    <ins class="adsbygoogle"
-         style="display:block"
-         data-ad-client="ca-pub-1691321744656002"
-         data-ad-slot="9029919301"
-         data-ad-format="auto"
-         data-full-width-responsive="true"></ins>
-    <script>
-         (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
-
-    <div class="fallback-ad">
-        <p>Sponsored</p>
-        <a href="https://paypal.me/UjjwalManandhar" target="_blank">
-            <img src="https://via.placeholder.com/160x600?text=Support+Me" alt="Fallback Ad">
-        </a>
-    </div>
+<!-- Responsive YouTube embed -->
+<div class="video-wrap">
+  <div class="video-container">
+    <iframe src="https://www.youtube.com/embed/YRPh_GaiL8s" title="4-7-8 Breathing Technique" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
 </div>
-<footer style="background:#1e1e1e; color:#eee; text-align:center; padding:15px; margin-top:40px;">
-  <p>&copy; 2025 https://quietmind.fun/ | 
-    <a href="PrivacyPolicy.html" style="color:#00e6e6; text-decoration:none;">Privacy Policy</a> | 
-    <a href="contact.html" style="color:#00e6e6; text-decoration:none;">Contact</a>
-  </p>
+
+<section class="blog-grid">
+
+  <article class="card">
+    <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=1200&q=80" alt="The Science of Deep Breathing for Stress Relief">
+    <div class="content">
+      <h3>The Science of Deep Breathing for Stress Relief</h3>
+      <p>Learn how deep breathing activates the parasympathetic nervous system to reduce stress and promote calmness.</p>
+      <a class="read" href="blog1.html">Read Article</a>
+    </div>
+  </article>
+
+  <article class="card">
+    <img src="https://images.unsplash.com/photo-1552072092-7f9b8d63a49b?auto=format&fit=crop&w=1200&q=80" alt="5 Daily Breathing Exercises to Calm Your Mind">
+    <div class="content">
+      <h3>5 Daily Breathing Exercises to Calm Your Mind</h3>
+      <p>Simple but powerful breathing practices you can do anywhere to find focus and serenity in your day.</p>
+      <a class="read" href="blog2.html">Read Article</a>
+    </div>
+  </article>
+
+  <article class="card">
+    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80" alt="How Mindful Breathing Improves Sleep Quality">
+    <div class="content">
+      <h3>How Mindful Breathing Improves Sleep Quality</h3>
+      <p>Calming breathwork before bed can help you fall asleep faster and wake up refreshed.</p>
+      <a class="read" href="blog3.html">Read Article</a>
+    </div>
+  </article>
+
+  <article class="card">
+    <img src="https://images.unsplash.com/photo-1512070679279-8988d32161be?auto=format&fit=crop&w=1200&q=80" alt="Breathing Techniques for Anxiety and Panic Attacks">
+    <div class="content">
+      <h3>Breathing Techniques for Anxiety and Panic Attacks</h3>
+      <p>Practical exercises to regulate your breath and calm your body during moments of intense anxiety.</p>
+      <a class="read" href="blog4.html">Read Article</a>
+    </div>
+  </article>
+
+  <article class="card">
+    <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1200&q=80" alt="The Power of Mindfulness Meditation for Anxiety">
+    <div class="content">
+      <h3>The Power of Mindfulness Meditation for Anxiety</h3>
+      <p>Explore how mindfulness can reduce stress and rewire anxious thought patterns.</p>
+      <a class="read" href="blog5.html">Read Article</a>
+    </div>
+  </article>
+
+  <article class="card">
+    <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1200&q=80" alt="Understanding and Managing Social Anxiety">
+    <div class="content">
+      <h3>Understanding and Managing Social Anxiety</h3>
+      <p>Learn techniques to navigate social situations with more confidence and ease.</p>
+      <a class="read" href="blog6.html">Read Article</a>
+    </div>
+  </article>
+
+  <article class="card">
+    <img src="https://images.unsplash.com/photo-1506806732259-39c2d0268443?auto=format&fit=crop&w=1200&q=80" alt="The Connection Between Gut Health and Anxiety">
+    <div class="content">
+      <h3>The Connection Between Gut Health and Anxiety</h3>
+      <p>Discover how your gut microbiome influences mood, anxiety, and overall mental health.</p>
+      <a class="read" href="blog7.html">Read Article</a>
+    </div>
+  </article>
+
+  <article class="card">
+    <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1200&q=80" alt="Journaling as a Tool for Anxiety Relief">
+    <div class="content">
+      <h3>Journaling as a Tool for Anxiety Relief</h3>
+      <p>Writing your thoughts helps process emotions and reduce mental clutter.</p>
+      <a class="read" href="blog8.html">Read Article</a>
+    </div>
+  </article>
+
+  <article class="card">
+    <img src="https://images.unsplash.com/photo-1558611848-73f7eb4001d7?auto=format&fit=crop&w=1200&q=80" alt="The Role of Physical Exercise in Mental Health">
+    <div class="content">
+      <h3>The Role of Physical Exercise in Mental Health</h3>
+      <p>Regular exercise is one of the most effective natural ways to boost mood and reduce anxiety.</p>
+      <a class="read" href="blog9.html">Read Article</a>
+    </div>
+  </article>
+
+  <article class="card">
+    <img src="https://images.unsplash.com/photo-1505751172876-fa1923c5c528?auto=format&fit=crop&w=1200&q=80" alt="The Importance of Sleep for Mental Clarity">
+    <div class="content">
+      <h3>The Importance of Sleep for Mental Clarity</h3>
+      <p>Deep, restorative sleep is essential for emotional balance and resilience.</p>
+      <a class="read" href="blog10.html">Read Article</a>
+    </div>
+  </article>
+
+  <article class="card">
+    <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=1200&q=80" alt="The 5-4-3-2-1 Grounding Technique">
+    <div class="content">
+      <h3>The 5-4-3-2-1 Grounding Technique</h3>
+      <p>A simple yet effective grounding tool to anchor yourself in the present moment.</p>
+      <a class="read" href="blog11.html">Read Article</a>
+    </div>
+  </article>
+
+  <article class="card">
+    <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=1200&q=80" alt="The Power of Positive Affirmations for a Calmer Mind">
+    <div class="content">
+      <h3>The Power of Positive Affirmations for a Calmer Mind</h3>
+      <p>Train your brain with daily affirmations to cultivate peace and positivity.</p>
+      <a class="read" href="blog12.html">Read Article</a>
+    </div>
+  </article>
+
+  <article class="card">
+    <img src="https://images.unsplash.com/photo-1520975912897-5d1b1f6d2f8b?auto=format&fit=crop&w=1200&q=80" alt="How to Create a Mindfulness Toolkit">
+    <div class="content">
+      <h3>How to Create a Mindfulness Toolkit</h3>
+      <p>Build your personalized set of practices and tools for daily mindfulness.</p>
+      <a class="read" href="blog13.html">Read Article</a>
+    </div>
+  </article>
+
+  <article class="card">
+    <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1200&q=80" alt="Overcoming Anxious Thoughts Through Cognitive Restructuring">
+    <div class="content">
+      <h3>Overcoming Anxious Thoughts Through Cognitive Restructuring</h3>
+      <p>Change thought patterns that fuel anxiety with CBT-inspired techniques.</p>
+      <a class="read" href="blog14.html">Read Article</a>
+    </div>
+  </article>
+
+  <article class="card">
+    <img src="https://images.unsplash.com/photo-1519985176271-adb1088fa94c?auto=format&fit=crop&w=1200&q=80" alt="The Benefits of Yoga for Mindful Movement and Anxiety">
+    <div class="content">
+      <h3>The Benefits of Yoga for Mindful Movement and Anxiety</h3>
+      <p>Discover how yoga unites body and breath to ease mental tension.</p>
+      <a class="read" href="blog15.html">Read Article</a>
+    </div>
+  </article>
+
+  <article class="card">
+    <img src="https://images.unsplash.com/photo-1499714608240-22fc6ad53fb2?auto=format&fit=crop&w=1200&q=80" alt="Building Resilience: How to Thrive in Uncertainty">
+    <div class="content">
+      <h3>Building Resilience: How to Thrive in Uncertainty</h3>
+      <p>Practical tips to strengthen emotional resilience in changing times.</p>
+      <a class="read" href="blog16.html">Read Article</a>
+    </div>
+  </article>
+
+  <article class="card">
+    <img src="https://images.unsplash.com/photo-1505575967452-33a4b6b08f13?auto=format&fit=crop&w=1200&q=80" alt="The Power of Sound and Music for Anxiety Relief">
+    <div class="content">
+      <h3>The Power of Sound and Music for Anxiety Relief</h3>
+      <p>Music therapy and sound baths can help calm the nervous system and ease anxiety.</p>
+      <a class="read" href="blog17.html">Read Article</a>
+    </div>
+  </article>
+
+  <article class="card">
+    <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1200&q=80" alt="Finding Peace in Nature: The Healing Power of the Outdoors">
+    <div class="content">
+      <h3>Finding Peace in Nature: The Healing Power of the Outdoors</h3>
+      <p>Nature immersion lowers stress, improves mood, and fosters a sense of calm.</p>
+      <a class="read" href="blog18.html">Read Article</a>
+    </div>
+  </article>
+
+  <article class="card">
+    <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=1200&q=80" alt="The Benefits of Decluttering for a Calm Mind">
+    <div class="content">
+      <h3>The Benefits of Decluttering for a Calm Mind</h3>
+      <p>A clean space often leads to a clearer mind — learn mindful decluttering strategies.</p>
+      <a class="read" href="blog19.html">Read Article</a>
+    </div>
+  </article>
+
+  <article class="card">
+    <img src="https://images.unsplash.com/photo-1503342452485-86f7f0ff3d43?auto=format&fit=crop&w=1200&q=80" alt="Managing Anxiety with a Consistent Routine">
+    <div class="content">
+      <h3>Managing Anxiety with a Consistent Routine</h3>
+      <p>Discover why routines provide stability and reduce stress in daily life.</p>
+      <a class="read" href="blog20.html">Read Article</a>
+    </div>
+  </article>
+
+  <article class="card">
+    <img src="https://images.unsplash.com/photo-1506806732259-39c2d0268443?auto=format&fit=crop&w=1200&q=80" alt="The Role of Nutrition in Anxiety and Mental Health">
+    <div class="content">
+      <h3>The Role of Nutrition in Anxiety and Mental Health</h3>
+      <p>Food choices have a direct impact on mood, anxiety, and brain health.</p>
+      <a class="read" href="blog21.html">Read Article</a>
+    </div>
+  </article>
+
+  <article class="card">
+    <img src="https://images.unsplash.com/photo-1506784983877-45594efa4cbe?auto=format&fit=crop&w=1200&q=80" alt="Simple Techniques to Stay Present Every Day">
+    <div class="content">
+      <h3>Simple Techniques to Stay Present Every Day</h3>
+      <p>Small daily mindfulness habits that keep you grounded and present.</p>
+      <a class="read" href="blog22.html">Read Article</a>
+    </div>
+  </article>
+
+</section>
+
+<footer>
+  <p>&copy; 2025 QuietMind.fun | <a href="PrivacyPolicy.html">Privacy Policy</a> | <a href="contact.html">Contact</a></p>
 </footer>
+
 </body>
 </html>
