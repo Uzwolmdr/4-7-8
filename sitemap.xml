@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Homepage -->
+  <url>
+    <loc>https://quietmind.fun/</loc>
+    <lastmod>2025-10-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Blog pages -->
+  <url><loc>https://quietmind.fun/blog.html</loc><lastmod>2025-10-12</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://quietmind.fun/blog1.html</loc><lastmod>2025-10-12</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://quietmind.fun/blog2.html</loc><lastmod>2025-10-12</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://quietmind.fun/blog3.html</loc><lastmod>2025-10-12</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://quietmind.fun/blog4.html</loc><lastmod>2025-10-12</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://quietmind.fun/blog5.html</loc><lastmod>2025-10-12</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://quietmind.fun/blog6.html</loc><lastmod>2025-10-12</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://quietmind.fun/blog7.html</loc><lastmod>2025-10-12</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://quietmind.fun/blog8.html</loc><lastmod>2025-10-12</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://quietmind.fun/blog9.html</loc><lastmod>2025-10-12</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://quietmind.fun/blog10.html</loc><lastmod>2025-10-12</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://quietmind.fun/blog11.html</loc><lastmod>2025-10-12</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://quietmind.fun/blog12.html</loc><lastmod>2025-10-12</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://quietmind.fun/blog13.html</loc><lastmod>2025-10-12</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://quietmind.fun/blog14.html</loc><lastmod>2025-10-12</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://quietmind.fun/blog15.html</loc><lastmod>2025-10-12</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://quietmind.fun/blog16.html</loc><lastmod>2025-10-12</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://quietmind.fun/blog17.html</loc><lastmod>2025-10-12</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://quietmind.fun/blog18.html</loc><lastmod>2025-10-12</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://quietmind.fun/blog19.html</loc><lastmod>2025-10-12</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://quietmind.fun/blog20.html</loc><lastmod>2025-10-12</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://quietmind.fun/blog21.html</loc><lastmod>2025-10-12</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://quietmind.fun/blog22.html</loc><lastmod>2025-10-12</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+
+  <!-- Other important pages -->
+  <url><loc>https://quietmind.fun/about.html</loc><lastmod>2025-10-12</lastmod><changefreq>yearly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://quietmind.fun/contact.html</loc><lastmod>2025-10-12</lastmod><changefreq>yearly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://quietmind.fun/PrivacyPolicy.html</loc><lastmod>2025-10-12</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
+
+</urlset>
