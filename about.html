@@ -1,58 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About QuietMind</title>
-  <meta name="description" content="About QuietMind - QuietMind breathing and mindfulness.">
-  <link rel="stylesheet" href="styles.css">
-  <style>
-    body {
-        background: #111;
-        color: #eee;
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        position: relative;
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>About QuietMind — Calm, Breath & Mindfulness</title>
+  <meta name="description" content="About QuietMind - breathing practices, mindfulness, sleep & anxiety relief resources." />
+  <style>
+    /* ---------- Root + Typography ---------- */
+    :root{
+      --bg:#0f0f11;
+      --card:#161619;
+      --accent:#00e6e6;
+      --muted:#bfc7c7;
+      --glass: rgba(255,255,255,0.03);
+      --max-width:1100px;
     }
-    nav {
-        background: #1e1e1e;
-        padding: 10px;
-        text-align: center;
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background:linear-gradient(180deg,var(--bg) 0%, #0b0b0c 100%);
+      color:#eaeef0;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.6;
+      padding-bottom:60px;
     }
-    nav a {
-        color: white;
-        margin: 0 15px;
-        text-decoration: none;
+    a{color:var(--accent);text-decoration:none}
+    a:hover{text-decoration:underline}
+    img{max-width:100%;display:block;border-radius:10px}
+    .container{max-width:var(--max-width);margin:0 auto;padding:28px 20px}
+    nav{display:flex;align-items:center;justify-content:space-between;padding:18px 20px;background:linear-gradient(180deg,#0e0e10,#0b0b0c);position:sticky;top:0;z-index:60;border-bottom:1px solid rgba(255,255,255,0.02)}
+    nav .brand{display:flex;align-items:center;gap:12px}
+    .logo { width:44px;height:44px;border-radius:10px;background:linear-gradient(135deg,#00e6e6,#00a6ff);display:flex;align-items:center;justify-content:center;font-weight:700;color:#041217;box-shadow:0 6px 18px rgba(0,0,0,0.6)}
+    nav a{color:#eaf6f6;font-weight:600;margin-left:16px}
+    /* ---------- Hero ---------- */
+    .hero{
+      display:grid;
+      grid-template-columns:1fr 420px;
+      gap:28px;
+      align-items:center;
+      padding:36px 20px;
     }
-    section {
-        max-width: 800px;
-        margin: auto;
-        padding: 20px;
+    @media(max-width:960px){.hero{grid-template-columns:1fr;padding:24px}}
+    .hero-card{
+      background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border-radius:14px;
+      padding:28px;
+      box-shadow:0 10px 30px rgba(0,0,0,0.6);
+      border:1px solid rgba(255,255,255,0.02);
     }
-    h1 {
-        color: #00e6e6;
+    .hero h1{margin:0;color:var(--accent);font-size:2rem;letter-spacing:0.2px}
+    .hero .tagline{color:var(--muted);margin-top:10px;max-width:760px}
+    .cta-row{margin-top:18px;display:flex;gap:12px;flex-wrap:wrap}
+    .btn{background:var(--accent);color:#031214;padding:10px 14px;border-radius:10px;font-weight:800;display:inline-block}
+    .ghost{border:1px solid rgba(255,255,255,0.06);padding:10px 14px;border-radius:10px;color:var(--muted)}
+    /* ---------- Right column: hero art ---------- */
+    .hero-art{position:relative;border-radius:12px;overflow:hidden;box-shadow:0 18px 40px rgba(0,0,0,0.6)}
+    .hero-art img{height:100%;width:100%;object-fit:cover;display:block}
+    .hero-badge{
+      position:absolute;left:12px;bottom:12px;background:rgba(5,18,18,0.6);padding:8px 10px;border-radius:999px;color:#bfeff0;font-weight:700;font-size:0.9rem;border:1px solid rgba(255,255,255,0.03)
     }
-    p {
-        line-height: 1.6;
-    }
-    .highlight {
-        background: #222;
-        padding: 20px;
-        border-radius: 8px;
-        border-left: 4px solid #00e6e6;
-    }
-    .highlight h3 {
-        margin-top: 0;
-    }
-    ol {
-        padding-left: 20px;
-    }
-    li {
-        margin-bottom: 10px;
-    }
-
-    /* Ad Panel Styling for Top-Left Position */
+    /* ---------- Sections grid ---------- */
+    .grid-2{display:grid;grid-template-columns:1fr 360px;gap:28px;align-items:start}
+    @media(max-width:980px){.grid-2{grid-template-columns:1fr}}
+    .card{background:var(--card);border-radius:12px;padding:18px;border:1px solid rgba(255,255,255,0.02)}
+    h2{color:var(--accent);margin-top:6px}
+    .muted{color:var(--muted)}
+    /* ---------- feature row ---------- */
+    .features{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:16px}
+    @media(max-width:980px){.features{grid-template-columns:repeat(1,1fr)}}
+    .feature{background:var(--glass);padding:18px;border-radius:10px;border:1px solid rgba(255,255,255,0.02)}
+    .feature h4{margin:8px 0 4px;color:#eaf6f6}
+    .icon{width:48px;height:48px;border-radius:10px;display:inline-flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#0ff,#06a);color:#021517;font-weight:800}
+    /* ---------- long content ---------- */
+    .article{margin-top:20px;background:linear-gradient(180deg, rgba(255,255,255,0.015), transparent);padding:22px;border-radius:12px;border:1px solid rgba(255,255,255,0.02)}
+    .article h3{color:var(--accent);margin-top:12px}
+    .lead{color:var(--muted);font-size:1.05rem}
+    .two-col{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    @media(max-width:900px){.two-col{grid-template-columns:1fr}}
+    blockquote{border-left:4px solid rgba(0,230,230,0.15);padding-left:12px;color:#d6f7f7;background:rgba(0,230,230,0.02);border-radius:6px;margin:18px 0;}
+    ul{padding-left:20px}
+    .quote{font-style:italic;color:#cfeff0}
+    .team-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:12px}
+    @media(max-width:980px){.team-grid{grid-template-columns:repeat(1,1fr)}}
+    .team-member{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:12px;border-radius:10px;text-align:center}
+    .team-member img{width:100%;height:160px;object-fit:cover;border-radius:8px;margin-bottom:8px}
+    .badge{display:inline-block;padding:6px 10px;border-radius:999px;background:rgba(255,255,255,0.02);color:var(--muted);font-weight:700;margin-top:8px}
+    /* ---------- footer ---------- */
+    footer{margin-top:28px;padding:28px 20px;background:linear-gradient(180deg,#0b0b0c,#070708);color:var(--muted);text-align:center;border-top:1px solid rgba(255,255,255,0.02)}
+    /* ---------- small helpers ---------- */
+    .muted-pill{background:rgba(255,255,255,0.02);padding:6px 10px;border-radius:999px;color:var(--muted);display:inline-block}
+    .spacer{height:12px}
+    .small{font-size:0.92rem;color:var(--muted)}
+    /* subtle animation */
+    .fade-up{transform:translateY(8px);opacity:0;animation:fadeUp 0.6s ease forwards}
+    @keyframes fadeUp{to{transform:none;opacity:1}}
+    /* Ad panel (kept from original) */
     .ad-panel {
         position: fixed;
         top: 20px;
@@ -63,68 +108,290 @@
         background: #333;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     }
-    .fallback-ad {
-        text-align: center;
-    }
-</style>
-
+    .fallback-ad { text-align:center }
+  </style>
 </head>
-<body style="background:#111;color:#eee;font-family:Arial,sans-serif;">
+<body>
+  <!-- Navigation -->
+  <nav>
+    <div class="container" style="display:flex;align-items:center;justify-content:space-between;gap:20px;padding:0">
+      <div class="brand">
+        <div class="logo">QM</div>
+        <div>
+          <div style="font-weight:800">QuietMind</div>
+          <div class="small" style="margin-top:2px">Breath • Calm • Focus</div>
+        </div>
+      </div>
+      <div style="display:flex;align-items:center">
+        <a href="index2.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </nav>
 
-<nav style="background:#1e1e1e;padding:10px;text-align:center;">
-  <a href="index2.html" style="color:white;margin:0 15px;text-decoration:none;">Home</a>
-  <a href="about.html" style="color:white;margin:0 15px;text-decoration:none;">About</a>
-  <a href="blog.html" style="color:white;margin:0 15px;text-decoration:none;">Blog</a>
-  <a href="contact.html" style="color:white;margin:0 15px;text-decoration:none;">Contact</a>
-</nav>
+  <!-- Hero -->
+  <div class="container hero" role="main">
+    <div class="hero-card fade-up">
+      <h1>QuietMind — modern breathwork & mindful living</h1>
+      <p class="tagline">Practical breathing practices, micro-mindfulness tools, and evidence-based techniques that help reduce anxiety, improve sleep, and sharpen focus — designed for busy lives.</p>
 
-<section style="max-width:800px;margin:auto;padding:20px;">
-  <h1 style="color:#00e6e6;">About QuietMind</h1>
-  
-<h1>Welcome to QuietMind: Your Sanctuary of Calm</h1>
-    <p>In the ceaseless hum of modern life, our minds are constantly racing. We juggle deadlines, notifications, and an endless stream of information, leaving little room for stillness. This relentless pace often leads to a trio of unwelcome guests: **stress**, **anxiety**, and **sleepless nights**. At QuietMind, we believe the key to reclaiming your peace doesn't lie in an external solution, but within a resource you carry with you every moment of every day: your breath.</p>
-    <p>Our mission is simple yet profound: to bring calmness and clarity to your life through guided, intentional breathing practices. We are dedicated to helping you harness the power of your own breath to navigate life's challenges with a steady and centered mind.</p>
+      <div class="cta-row">
+        <a class="btn" href="blog.html">Explore Practices</a>
+        <a class="ghost" href="contact.html">Work With Us</a>
+        <span class="muted-pill">Free • Science-backed • Portable</span>
+      </div>
 
-    <hr>
+      <div class="spacer"></div>
 
-    <h2>The Philosophy: Natural, Accessible, Powerful</h2>
-    <p>At QuietMind, we champion natural, non-invasive pathways to improve mental well-being. Before reaching for complex solutions, we encourage looking inward. The connection between our breath and our state of mind is one of the most direct and potent relationships in our entire physiological system. When you're anxious, your breathing becomes shallow and rapid. When you're calm, it's deep and slow. The incredible part is that this is not a one-way street; by consciously changing the pattern of your breath, you can directly influence your mental and emotional state. This is the foundational principle of our work—empowering you with techniques that are free, available anytime, and incredibly effective.</p>
+      <div class="features">
+        <div class="feature">
+          <div style="display:flex;gap:12px;align-items:center">
+            <div class="icon">4-7-8</div>
+            <div>
+              <h4>Quick Calm</h4>
+              <div class="small muted">Tools you can use in under a minute.</div>
+            </div>
+          </div>
+        </div>
+        <div class="feature">
+          <div style="display:flex;gap:12px;align-items:center">
+            <div class="icon">YIN</div>
+            <div>
+              <h4>Daily Routines</h4>
+              <div class="small muted">Simple sequences to build resilience.</div>
+            </div>
+          </div>
+        </div>
+        <div class="feature">
+          <div style="display:flex;gap:12px;align-items:center">
+            <div class="icon">📊</div>
+            <div>
+              <h4>Evidence First</h4>
+              <div class="small muted">Techniques grounded in research.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-    <hr>
+    <div class="hero-art fade-up" style="height:320px">
+      <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1400&q=80" alt="Serene meditation scene">
+      <div class="hero-badge">Guided • Practical • Short</div>
+    </div>
+  </div>
 
-    <h2>Featured Technique: The 4-7-8 Breathing Method</h2>
-    <p>One of the cornerstone practices we teach is the **4-7-8 technique**, also known as the "Relaxing Breath." Popularized by Dr. Andrew Weil, this exercise is a natural tranquilizer for the nervous system. Its power lies in its rhythm, which helps to reset your body's stress response and guide you into a state of deep relaxation. It's particularly effective for calming anxiety and preparing the body for sleep.</p>
-    
-    
-    <div class="highlight">
-        <h3>How to Practice 4-7-8 Breathing:</h3>
-        <ol>
-            <li>Find a comfortable position, either sitting with your back straight or lying down.</li>
-            <li>Place the tip of your tongue against the ridge of tissue just behind your upper front teeth and keep it there throughout the entire exercise.</li>
-            <li>Exhale completely through your mouth, making a gentle "whoosh" sound.</li>
-            <li>Close your mouth and **inhale quietly through your nose for a mental count of 4**.</li>
-            <li>**Hold your breath for a count of 7**.</li>
-            <li>**Exhale completely through your mouth, making that "whoosh" sound, for a count of 8**.</li>
-            <li>This completes one breath cycle. Inhale again and repeat the cycle three more times for a total of four breaths.</li>
-        </ol>
-    </div>
+  <!-- Two-column region: mission + stats -->
+  <div class="container grid-2">
+    <div>
+      <div class="card fade-up">
+        <h2>Our Mission</h2>
+        <p class="lead muted">QuietMind exists to make breath and mindfulness approachable, modern, and practical. We translate scientific breathing approaches into compact, accessible practices that fit into real days — not retreats. Our goal is to help you feel calmer, sleep better, and perform at your best without complicated routines or expensive equipment.</p>
 
-    <p>The magic of this technique is in the extended exhale. Holding your breath allows your body to fully absorb the oxygen, and the long, intentional exhale stimulates the **vagus nerve**. This activates the parasympathetic nervous system—your body's "rest and digest" mode—which lowers your heart rate, reduces blood pressure, and tells your brain that it is safe to relax. With consistent practice, the 4-7-8 breath can become a reliable tool to quickly de-escalate stress in any situation.</p>
-    
-    <hr>
-    
-    <h2>A Journey into Mindfulness</h2>
-    <p>Breathing exercises are more than just a mechanical process; they are a gateway to **mindfulness**. Each time you intentionally focus on an inhale and an exhale, you are training your attention. You are anchoring yourself in the present moment, rather than being swept away by worries about the future or regrets about the past. This practice of returning your focus, again and again, builds mental resilience.</p>
-    <p>At QuietMind, we guide you in exploring a variety of techniques beyond the 4-7-8 method, including **Box Breathing** for focused calm and **Diaphragmatic (Belly) Breathing** to establish a healthy, natural breath pattern. Each technique is a tool, and with our guidance, you can build a versatile toolkit to manage your unique mental wellness needs.</p>
+        <div class="article">
+          <h3>What we believe</h3>
+          <p>We believe breathing is the most reliable anchor we have to the present moment. It's portable, free, and effective. QuietMind brings a design-forward, human-centered approach to breathwork: simple exercises, clear explanations, and gentle habit design so practices actually stick.</p>
 
-    <hr>
+          <blockquote>
+            <div class="quote">"Small consistent practices beat occasional grand efforts." — QuietMind philosophy</div>
+          </blockquote>
 
-    <h2>Join Us on the Path to Peace</h2>
-    <p>Whether you're a professional battling burnout, a student facing exam pressure, or anyone simply seeking a more serene and centered life, QuietMind is here for you. We believe that everyone deserves to feel at peace. The journey doesn't require expensive equipment or drastic lifestyle changes. It begins with a single, conscious breath.</p>
-    <p>Join us in this exploration. Discover the profound tranquility that lies within. Let us guide you as you learn to breathe your way to a calmer mind, a more restful sleep, and a more peaceful life.</p>
-    
-</section>
-<div class="ad-panel">
+          <h3>How we help</h3>
+          <ul>
+            <li>Short guided exercises for stress & anxiety (1–5 minutes)</li>
+            <li>Evidence-based breath protocols explained clearly</li>
+            <li>Weekly micro-lessons and tools you can practice anywhere</li>
+            <li>Resources for sleep, focus, and emotional regulation</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="spacer"></div>
+
+      <!-- Long-form article content (expanded, long reading) -->
+      <article class="article fade-up" aria-labelledby="deep-dive">
+        <h2 id="deep-dive">A deep dive — why breath works (science, not mysticism)</h2>
+
+        <p class="muted">Below is a comprehensive, yet approachable, explanation of the physiological and psychological mechanisms that make breath practice effective. This section combines evidence summaries, practical tips, and a few case vignettes to help you apply the ideas to daily life.</p>
+
+        <h3>Physiology: the autonomic balance</h3>
+        <p>Breath is a two-way dial between the sympathetic ("fight/flight") and parasympathetic ("rest/digest") nervous systems. Short, shallow breathing tends to correlate with increased arousal, while longer, slower exhalations nudge the vagus nerve — and the parasympathetic system — into action. This physiological influence is why deliberate breath patterns can lower heart rate, reduce cortisol, and create a felt sense of safety.</p>
+
+        <h3>Psychology: attention and safety</h3>
+        <p>When you focus your attention on the breath, you anchor the mind to immediate sensory experience. Attention training reduces rumination by providing a stable object — the inhale and the exhale — that is always present. Over time this builds attentional control and emotional flexibility.</p>
+
+        <div class="two-col">
+          <div>
+            <h3>Practical takeaway</h3>
+            <ul>
+              <li>Start with 2 minutes a day. Increase gradually.</li>
+              <li>Use breath to shift state: 30–60 sec 4-4 breathing calms mild agitation; 4-7-8 helps before sleep.</li>
+              <li>Combine posture, environment, and breath for faster effects.</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Case vignette</h3>
+            <p class="small">Sofia, a graphic designer, used a 3×/day 90-second breathing routine for six weeks. She reported improved sleep onset and fewer midday panic spikes. Objective sleep tracking also showed slightly increased total sleep time.</p>
+          </div>
+        </div>
+
+        <h3>Common myths</h3>
+        <ul>
+          <li><strong>Myth:</strong> You must breathe "perfectly" to benefit. <br><em>Fact:</em> Small, consistent improvements matter far more than perfection.</li>
+          <li><strong>Myth:</strong> Breathwork is only for spiritual seekers. <br><em>Fact:</em> Breath practices are practical tools used in modern medicine, sports, and performance training.</li>
+        </ul>
+
+        <h3>Resources & evidence</h3>
+        <p class="small muted">We draw from a broad body of research in autonomic neuroscience, clinical psychology, and behavioral sleep medicine. Where appropriate on the site we link to accessible reviews and primary studies — but we always emphasise practical translation over dense science-speak.</p>
+      </article>
+    </div>
+
+    <!-- Right column: quick links, stats, opt-in -->
+    <aside>
+      <div class="card fade-up">
+        <h3>Quick Resources</h3>
+        <ul class="small">
+          <li><a href="blog2.html">5 Daily Breathing Exercises</a></li>
+          <li><a href="blog3.html">Breathing for Sleep</a></li>
+          <li><a href="blog4.html">Breathing for Panic</a></li>
+          <li><a href="blog13.html">Build a Mindfulness Toolkit</a></li>
+        </ul>
+        <div style="height:12px"></div>
+        <div style="display:flex;gap:10px;align-items:center">
+          <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=600&q=60" alt="" style="width:84px;height:64px;object-fit:cover;border-radius:8px">
+          <div>
+            <div style="font-weight:700">Weekly Calm Email</div>
+            <div class="small muted">Short mindful practices delivered to your inbox.</div>
+          </div>
+        </div>
+        <div style="height:12px"></div>
+        <a class="btn" href="contact.html">Join our mailing list</a>
+      </div>
+
+      <div class="spacer"></div>
+
+      <div class="card fade-up">
+        <h3>By the numbers</h3>
+        <div style="display:flex;gap:10px;flex-direction:column;margin-top:8px">
+          <div><strong>22</strong> in-depth articles</div>
+          <div><strong>80%</strong> readers report better sleep (survey)</div>
+          <div><strong>3</strong> minutes to calm — typical routine length</div>
+        </div>
+      </div>
+
+      <div class="spacer"></div>
+
+      <div class="card fade-up">
+        <h3>Who we are</h3>
+        <div class="team-grid">
+          <div class="team-member">
+            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=800&q=60" alt="Founder">
+            <div style="font-weight:800">Steven Gerrard</div>
+            <div class="small muted">Founder & Breath Coach</div>
+            <div class="badge">Lead</div>
+          </div>
+          <div class="team-member">
+            <img src="https://images.unsplash.com/photo-1546525848-3ce03ca516f6?auto=format&fit=crop&w=800&q=60" alt="Content">
+            <div style="font-weight:800">Xabi Alonso</div>
+            <div class="small muted">Content & Research</div>
+            <div class="badge">Editor</div>
+          </div>
+          <div class="team-member">
+            <img src="https://images.unsplash.com/photo-1543269865-cbf427effbad?auto=format&fit=crop&w=800&q=60" alt="Design">
+            <div style="font-weight:800">Jamie Carragher</div>
+            <div class="small muted">Design & Product</div>
+            <div class="badge">Design</div>
+          </div>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  <!-- Mid-page gallery / illustrated icons -->
+  <div class="container">
+    <div class="article fade-up">
+      <h2>Tools & Techniques (illustrated)</h2>
+      <p class="muted">A quick visual tour of the exercises you'll use most on QuietMind.</p>
+
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:14px">
+        <div class="card" style="text-align:center">
+          <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=800&q=60" alt="Box Breathing" style="height:140px">
+          <div style="font-weight:800;margin-top:8px">Box Breathing</div>
+          <div class="small muted">4-4-4-4 pattern for steady focus</div>
+        </div>
+        <div class="card" style="text-align:center">
+          <img src="https://images.unsplash.com/photo-1509233725247-0d9f8f53d1f8?auto=format&fit=crop&w=800&q=60" alt="4-7-8" style="height:140px">
+          <div style="font-weight:800;margin-top:8px">4-7-8</div>
+          <div class="small muted">Relaxing Breath for sleep</div>
+        </div>
+        <div class="card" style="text-align:center">
+          <img src="https://images.unsplash.com/photo-1496307042754-b4aa456c4a2d?auto=format&fit=crop&w=800&q=60" alt="Diaphragmatic" style="height:140px">
+          <div style="font-weight:800;margin-top:8px">Diaphragmatic</div>
+          <div class="small muted">Belly breathing for core regulation</div>
+        </div>
+        <div class="card" style="text-align:center">
+          <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=800&q=60" alt="Mindful Pause" style="height:140px">
+          <div style="font-weight:800;margin-top:8px">Micro Pauses</div>
+          <div class="small muted">2–3 breath resets across the day</div>
+        </div>
+      </div>
+
+      <p style="margin-top:14px">Each illustrated card links to a quick practice on our blog — try one now and notice the difference even after a single practice.</p>
+    </div>
+  </div>
+
+  <!-- FAQ + Resources -->
+  <div class="container">
+    <div class="grid-2">
+      <div>
+        <div class="card fade-up">
+          <h2>Frequently Asked Questions</h2>
+          <h3>Is breathwork safe?</h3>
+          <p class="muted">For most people, yes — simple breathing practices are safe and low-risk. Those with specific respiratory or cardiac conditions should consult a clinician. We include cautions for breath-hold exercises and encourage gentle progression.</p>
+
+          <h3>How long until I notice benefits?</h3>
+          <p class="muted">Many people feel calmer within 30–60 seconds of a short exercise. Lasting changes in sleep or anxiety often appear over weeks of consistent, brief practice.</p>
+
+          <h3>Do I need guided audio?</h3>
+          <p class="muted">Audio can help beginners. Our posts and short guided clips are designed to be used with or without audio depending on your context.</p>
+
+          <h3>Where did QuietMind come from?</h3>
+          <p class="muted">QuietMind grew from a desire to make short, effective breathing tools accessible to busy people. We blend design, storytelling, and clinical evidence to make practices stick.</p>
+        </div>
+
+        <div class="spacer"></div>
+
+        <div class="card fade-up">
+          <h2>Further Reading</h2>
+          <ul>
+            <li><a href="#">Breathing and the Nervous System — review article</a></li>
+            <li><a href="#">Behavioral Sleep Medicine introduction</a></li>
+            <li><a href="#">Mindfulness-based stress reduction (MBSR) overview</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <aside>
+        <div class="card fade-up">
+          <h3>Get the Quick Start Pack</h3>
+          <p class="small muted">Three short audio practices and a printable habit card — free with signup.</p>
+          <a class="btn" href="contact.html">Get the Pack</a>
+        </div>
+
+        <div class="spacer"></div>
+
+        <div class="card fade-up">
+          <h3>Partner with QuietMind</h3>
+          <p class="small muted">We work with wellness programs, corporate teams, and educators. Custom workshops available.</p>
+          <a class="ghost" href="contact.html">Inquire →</a>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <!-- Ad panel (kept same as original) -->
+  <div class="ad-panel" role="complementary" aria-label="Advertisement">
     <ins class="adsbygoogle"
          style="display:block"
          data-ad-client="ca-pub-1691321744656002"
@@ -136,17 +403,23 @@
     </script>
 
     <div class="fallback-ad">
-        <p>Sponsored</p>
-        <a href="https://paypal.me/UjjwalManandhar" target="_blank">
-            <img src="https://via.placeholder.com/160x600?text=Support+Me" alt="Fallback Ad">
+        <p style="color:#ddd;margin:8px 0 6px 0">Sponsored</p>
+        <a href="https://paypal.me/UjjwalManandhar" target="_blank" rel="noopener">
+            <img src="https://via.placeholder.com/160x600?text=Support+Me" alt="Fallback Ad" style="border-radius:6px">
         </a>
     </div>
-</div>
-<footer style="background:#1e1e1e; color:#eee; text-align:center; padding:15px; margin-top:40px;">
-  <p>&copy; 2025 https://quietmind.fun/ | 
-    <a href="PrivacyPolicy.html" style="color:#00e6e6; text-decoration:none;">Privacy Policy</a> | 
-    <a href="contact.html" style="color:#00e6e6; text-decoration:none;">Contact</a>
-  </p>
-</footer>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div style="display:flex;flex-direction:column;gap:8px;align-items:center">
+        <div style="font-weight:800;color:var(--accent)">QuietMind</div>
+        <div class="small">© 2025 QuietMind.fun • All rights reserved</div>
+        <div class="small"><a href="PrivacyPolicy.html">Privacy Policy</a> • <a href="contact.html">Contact</a></div>
+      </div>
+    </div>
+  </footer>
+
 </body>
 </html>

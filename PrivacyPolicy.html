@@ -1,194 +1,410 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy</title>
-    <meta name="description" content="Privacy Policy for QuietMind website.">
-    
-    <!-- Google Tag Manager -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZXXZD8D77L"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-ZXXZD8D77L');
-    </script>
-    
-    <!-- AdSense -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1691321744656002"
-        crossorigin="anonymous"></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Privacy Policy — QuietMind</title>
+  <meta name="description" content="Privacy Policy for QuietMind website." />
+  <!-- Google Tag Manager -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZXXZD8D77L"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZXXZD8D77L');
+  </script>
 
-    <style>
-        body {
-            background: #111;
-            color: #eee;
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            position: relative;
-        }
-        nav {
-            background: #1e1e1e;
-            padding: 10px;
-            text-align: center;
-        }
-        nav a {
-            color: white;
-            margin: 0 15px;
-            text-decoration: none;
-        }
-        section {
-            max-width: 800px;
-            margin: auto;
-            padding: 20px;
-        }
-        h1 {
-            color: #00e6e6;
-            text-align: center;
-        }
-        h2, p, ul, ol {
-            text-align: left;
-        }
-        .intro {
-            font-style: italic;
-        }
-        .quote {
-            background: #222;
-            padding: 15px;
-            border-left: 4px solid #00e6e6;
-            margin: 20px 0;
-            font-style: italic;
-            text-align: left;
-        }
-        ul, ol {
-            padding-left: 20px;
-        }
-        ul li, ol li {
-            margin-bottom: 10px;
-        }
-        .ad-panel {
-            position: fixed;
-            top: 20px;
-            left: 20px;
-            z-index: 1000;
-            padding: 10px;
-            border-radius: 5px;
-            background: #333;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-        }
-        .fallback-ad {
-            text-align: center;
-        }
+  <!-- AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1691321744656002"
+      crossorigin="anonymous"></script>
 
-        /* Footer styles: full-width, centered */
-        .site-footer {
-            width: 100%;
-            box-sizing: border-box;
-            background: #1e1e1e;
-            color: #eee;
-            padding: 18px 16px;
-            margin-top: 40px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: 6px;
-            text-align: center;
-        }
-        .site-footer a {
-            color: #00e6e6;
-            text-decoration: none;
-            margin: 0 6px;
-            display: inline-block;
-        }
-        .site-footer .links {
-            display: flex;
-            gap: 8px;
-            align-items: center;
-            justify-content: center;
-        }
-    </style>
+  <style>
+    :root{
+      --bg: #0f0f11;
+      --panel: #1e1e1e;
+      --card: #161619;
+      --accent: #00e6e6;
+      --muted: #bfc7c7;
+      --glass: rgba(255,255,255,0.03);
+      --max-width: 1100px;
+      --radius: 12px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background: linear-gradient(180deg,var(--bg), #070708);
+      color: #e8eef0;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.65;
+    }
+    a{color:var(--accent);text-decoration:none}
+    a:hover{text-decoration:underline}
+    nav{background:var(--panel);padding:12px 18px;text-align:center;border-bottom:1px solid rgba(255,255,255,0.02);position:sticky;top:0;z-index:40}
+    nav a{color:#fff;margin:0 12px;font-weight:600}
+    .container{max-width:var(--max-width);margin:28px auto;padding:0 18px}
+    header{display:flex;align-items:center;gap:18px;justify-content:space-between;margin-bottom:18px}
+    .title-block{display:flex;gap:14px;align-items:center}
+    .logo { width:54px;height:54px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#00a6ff);display:flex;align-items:center;justify-content:center;color:#031214;font-weight:800;font-size:18px;box-shadow:0 8px 30px rgba(0,0,0,0.6)}
+    h1{font-size:1.6rem;color:var(--accent);margin:0}
+    .lead{color:var(--muted);max-width:900px}
+    .meta {color:var(--muted);font-size:0.95rem;margin-top:6px}
+    .hero-graphic{height:84px;border-radius:10px;overflow:hidden;background:linear-gradient(90deg,rgba(0,230,230,0.04),rgba(0,166,255,0.03));display:flex;align-items:center;padding:12px;border:1px solid rgba(255,255,255,0.02)}
+    main{margin-top:18px;display:grid;grid-template-columns:1fr 360px;gap:22px}
+    @media(max-width:980px){main{grid-template-columns:1fr;padding:0 6px}}
+    .content {background:linear-gradient(180deg,var(--card), rgba(255,255,255,0.003));border-radius:var(--radius);padding:20px;border:1px solid rgba(255,255,255,0.02)}
+    .sidebar {position:relative;top:0}
+    .card{background:var(--card);border-radius:10px;padding:16px;border:1px solid rgba(255,255,255,0.02);margin-bottom:16px}
+    h2{color:var(--accent);margin-top:6px}
+    h3{color:#dff; margin-top:14px}
+    p, li{color:#e6eef0}
+    ul, ol{margin:10px 0 20px 20px}
+    blockquote{border-left:4px solid rgba(0,230,230,0.12);padding-left:12px;color:#d6f7f7;background:rgba(0,230,230,0.02);border-radius:6px;margin:16px 0}
+    .muted {color:var(--muted)}
+    .small {font-size:0.92rem;color:var(--muted)}
+    .toc{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
+    .toc a{background:rgba(255,255,255,0.02);padding:8px 10px;border-radius:8px;color:var(--muted);font-weight:700}
+    .section {margin-bottom:18px}
+    .data-table{width:100%;border-collapse:collapse;margin-top:8px}
+    .data-table th,.data-table td{padding:10px;border-bottom:1px solid rgba(255,255,255,0.03);text-align:left;font-size:0.95rem}
+    .highlight {background:rgba(0,230,230,0.03);padding:12px;border-radius:8px;border:1px solid rgba(0,230,230,0.03);color:#cff}
+    .btn {display:inline-block;padding:10px 14px;border-radius:8px;background:var(--accent);color:#041217;font-weight:800;margin-top:8px}
+    /* Ad panel */
+    .ad-panel {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      z-index: 1000;
+      padding: 10px;
+      border-radius: 5px;
+      background: #333;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+    .fallback-ad {text-align:center}
+    footer{margin-top:18px;padding:22px 0;background:var(--panel);text-align:center;color:var(--muted);border-top:1px solid rgba(255,255,255,0.02)}
+    .discrete {font-size:0.92rem;color:var(--muted)}
+    /* accessibility helpers */
+    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+  </style>
 </head>
 <body>
-
-<nav>
+  <nav aria-label="Main navigation">
     <a href="index2.html">Home</a>
     <a href="about.html">About</a>
     <a href="blog.html">Blog</a>
     <a href="contact.html">Contact</a>
-</nav>
+  </nav>
 
-<header>
-    <h1>Privacy Policy</h1>
-</header>
+  <div class="container">
+    <header>
+      <div class="title-block">
+        <div class="logo" aria-hidden="true">QM</div>
+        <div>
+          <h1>Privacy Policy</h1>
+          <div class="meta small">Last updated: <strong>October 13, 2025</strong> — QuietMind.fun</div>
+          <div class="lead small" style="margin-top:8px">A clear, friendly explanation of how we collect, use, retain, and protect personal data on QuietMind. This page contains details about cookies, analytics, advertising, your rights, and how to contact us.</div>
+        </div>
+      </div>
+      <div class="hero-graphic" role="img" aria-label="Decorative wave graphic">
+        <!-- simple SVG decoration -->
+        <svg width="100%" height="60" viewBox="0 0 600 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <defs>
+            <linearGradient id="g" x1="0" x2="1">
+              <stop offset="0" stop-color="#00e6e6"/>
+              <stop offset="1" stop-color="#00a6ff"/>
+            </linearGradient>
+          </defs>
+          <path d="M0 40 C150 0 450 80 600 40 L600 60 L0 60 Z" fill="url(#g)" opacity="0.06"></path>
+        </svg>
+      </div>
+    </header>
 
-<main>
-    <section>
-        <p class="intro">Your privacy is important to us. This Privacy Policy explains how we collect, use, and protect your personal information when you visit our website.</p>
+    <main>
+      <article class="content" aria-labelledby="policy-intro">
+        <section id="policy-intro" class="section">
+          <h2>Introduction</h2>
+          <p>Welcome to QuietMind. Protecting your privacy is important to us. This Privacy Policy explains what information we collect, how we use it, how we protect it, and the choices you have. We wrote this policy to be clear and practical — we avoid legalese where possible while covering the important details you need to know.</p>
 
-        <h2>Information We Collect</h2>
-        <p>We do not collect any personally identifiable information from you unless you voluntarily provide it to us. However, we may collect non-personally identifiable information through the use of cookies and other tracking technologies to improve your experience on our site.</p>
-        
-        <div class="quote">
-            "Your privacy is a priority, and we are committed to protecting your data."
+          <p class="small muted">Scope: This policy applies to data processed through <strong>https://quietmind.fun</strong> and any related services, pages, or subdomains operated by QuietMind, unless a different privacy notice is provided.</p>
+
+          <div class="toc" aria-hidden="false">
+            <a href="#info-we-collect">Information We Collect</a>
+            <a href="#how-we-use">How We Use Information</a>
+            <a href="#cookies">Cookies & Tracking</a>
+            <a href="#ads-analytics">Ads & Analytics</a>
+            <a href="#third-parties">Third Parties</a>
+            <a href="#data-rights">Your Rights</a>
+            <a href="#security">Security</a>
+            <a href="#contact">Contact</a>
+          </div>
+        </section>
+
+        <section id="info-we-collect" class="section">
+          <h2>Information We Collect</h2>
+          <p>We collect only the information necessary to provide and improve the site and services. We separate data into two categories:</p>
+
+          <ul>
+            <li><strong>Personal Data</strong> — Information you intentionally provide that can identify you (for example: name, email address when you subscribe, contact form entries).</li>
+            <li><strong>Non-Personal / Technical Data</strong> — Data that does not by itself identify you (for example: browser type, device, IP address, pages visited, time on site, referrer, and anonymized analytics).</li>
+          </ul>
+
+          <h3>Examples of data we process</h3>
+          <table class="data-table" aria-describedby="table-note">
+            <thead>
+              <tr><th>Category</th><th>Examples</th><th>Purpose</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Contact details</td><td>Name, email (provided in contact form or subscription)</td><td>Respond to inquiries, deliver newsletters</td></tr>
+              <tr><td>Usage data</td><td>Pages visited, time on page, device & browser</td><td>Site analytics and improvements</td></tr>
+              <tr><td>Advertising identifiers</td><td>Cookies and ad IDs when ads are displayed</td><td>Serve and measure ads</td></tr>
+              <tr><td>Form inputs</td><td>Feedback messages, voluntary survey responses</td><td>Service improvement and research</td></tr>
+            </tbody>
+          </table>
+          <p id="table-note" class="small muted">Note: when you choose not to provide personal data (for instance by visiting the site without subscribing or filling forms), we only receive non-identifying technical information necessary for the site to function.</p>
+        </section>
+
+        <section id="how-we-use" class="section">
+          <h2>How We Use Information</h2>
+          <p>We use collected data for the following lawful and limited purposes:</p>
+          <ul>
+            <li><strong>Service delivery:</strong> to respond to messages, deliver newsletters, or provide access to resources you request.</li>
+            <li><strong>Site improvement:</strong> to analyze site usage and improve content, layout, and performance.</li>
+            <li><strong>Security & fraud prevention:</strong> to detect and protect against security threats, abuse, or misuse.</li>
+            <li><strong>Advertising & measurement:</strong> to display and measure the effectiveness of ads via partners like Google AdSense.</li>
+            <li><strong>Legal compliance:</strong> to comply with laws, defend our rights, and cooperate with law enforcement if required.</li>
+          </ul>
+
+          <h3>Lawful basis</h3>
+          <p class="small muted">If you are in the European Economic Area (EEA), our legal bases for processing personal data typically include:</p>
+          <ul>
+            <li><strong>Consent</strong> — where you have given clear consent (for example subscribing to a newsletter).</li>
+            <li><strong>Contractual necessity</strong> — to perform a service you requested.</li>
+            <li><strong>Legitimate interests</strong> — to improve site operations and maintain security (balanced with users’ rights).</li>
+          </ul>
+        </section>
+
+        <section id="cookies" class="section">
+          <h2>Cookies & Tracking Technologies</h2>
+          <p>Cookies are small text files stored on your device. We use cookies for essential site functionality, analytics, and advertising. You can manage cookies via your browser settings, but disabling certain cookies may affect how the site functions.</p>
+
+          <h3>Types of cookies we use</h3>
+          <ul>
+            <li><strong>Essential cookies:</strong> Required for the core functionality (session management).</li>
+            <li><strong>Preference cookies:</strong> Save language or display preferences.</li>
+            <li><strong>Analytics cookies:</strong> Collect information about site use (non-identifying).</li>
+            <li><strong>Advertising cookies:</strong> Used to serve and measure ads; may track activity across sites.</li>
+          </ul>
+
+          <div class="highlight">
+            <strong>Manage cookies:</strong> Most browsers let you block or delete cookies. Instructions:
+            <ul>
+              <li>Chrome — Settings → Privacy and security → Cookies and other site data</li>
+              <li>Firefox — Preferences → Privacy & Security → Cookies and Site Data</li>
+              <li>Safari — Preferences → Privacy</li>
+            </ul>
+          </div>
+        </section>
+
+        <section id="ads-analytics" class="section">
+          <h2>Advertisements & Analytics</h2>
+          <p>We use Google AdSense to display ads and Google Analytics (via gtag) to measure site usage. These third-party services collect information about your device and browsing activity. Their use of data is subject to their privacy policies.</p>
+
+          <h3>Opt-out options</h3>
+          <ul>
+            <li>To opt out of Google Analytics: use the <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener">Google Analytics opt-out browser add-on</a>.</li>
+            <li>To opt out of personalized ads: visit <a href="https://www.google.com/settings/ads" target="_blank" rel="noopener">Google Ads Settings</a>.</li>
+          </ul>
+
+          <h3>Measurement & aggregated reporting</h3>
+          <p class="small muted">We analyze aggregate data (for example: total pageviews, device distribution) to understand trends and improve user experience. Aggregate metrics do not include personally identifying details unless you have provided them intentionally (e.g. via a form).</p>
+        </section>
+
+        <section id="third-parties" class="section">
+          <h2>Third-Party Services</h2>
+          <p>We may share information with trusted third parties who perform services on our behalf (e.g., email delivery, analytics, hosting, ad networks). We only share the minimal data necessary for these partners to operate, and we use contractual safeguards where appropriate.</p>
+
+          <h3>Service partners (examples)</h3>
+          <ul>
+            <li><strong>Google</strong> — Analytics, Tag Manager, Ads. Their data practices are governed by Google's privacy policy.</li>
+            <li><strong>Email provider</strong> — If you opt into newsletters, we use a secure email service to deliver messages and manage subscriptions.</li>
+            <li><strong>Hosting provider</strong> — stores site files and handles server logs.</li>
+          </ul>
+
+          <p class="small muted">We do not sell your personal information to third parties.</p>
+        </section>
+
+        <section id="data-rights" class="section">
+          <h2>Your Rights</h2>
+          <p>You have rights regarding the personal data we hold about you. These rights vary by jurisdiction but commonly include:</p>
+          <ul>
+            <li><strong>Right to access</strong> — request a copy of the personal data we hold about you.</li>
+            <li><strong>Right to rectification</strong> — correct inaccurate or incomplete data.</li>
+            <li><strong>Right to erasure</strong> — request deletion of your personal data (subject to legal exceptions).</li>
+            <li><strong>Right to restrict processing</strong> — ask us to limit processing for certain purposes.</li>
+            <li><strong>Right to data portability</strong> — receive a machine-readable copy of your data.</li>
+            <li><strong>Right to object</strong> — object to processing based on our legitimate interests or for direct marketing.</li>
+          </ul>
+
+          <h3>How to exercise your rights</h3>
+          <p>To exercise any of the above rights, please contact us using the details in the <a href="#contact">Contact section</a>. We will respond to verified requests within a reasonable timeframe and in accordance with applicable law.</p>
+        </section>
+
+        <section id="security" class="section">
+          <h2>Security & Data Retention</h2>
+          <p>We take reasonable technical and organizational measures to protect personal data from accidental loss, misuse, unauthorized access, disclosure, alteration, and destruction.</p>
+
+          <h3>Examples of our security measures</h3>
+          <ul>
+            <li>Encrypted connections (HTTPS) across the site.</li>
+            <li>Access controls and least-privilege policies for systems that store or process data.</li>
+            <li>Regular backups and monitoring, and security patching.</li>
+          </ul>
+
+          <h3>Retention</h3>
+          <p>We retain personal data only as long as necessary to fulfill the purposes described in this Privacy Policy, unless a longer retention period is required by law. Typical retention periods:</p>
+          <table class="data-table">
+            <thead><tr><th>Data type</th><th>Retention</th></tr></thead>
+            <tbody>
+              <tr><td>Contact form messages</td><td>3 years (or until request to delete)</td></tr>
+              <tr><td>Email subscription list</td><td>Until unsubscribed</td></tr>
+              <tr><td>Server logs / analytics</td><td>24 months (aggregated)</td></tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section id="cookies-impl" class="section">
+          <h2>How to Control Cookies & Tracking</h2>
+          <p>If you want to restrict or block cookies you can do so through your browser settings. Below are quick links to cookie settings pages for common browsers:</p>
+          <ul>
+            <li><a href="https://support.google.com/chrome/answer/95647" target="_blank" rel="noopener">Chrome cookie settings</a></li>
+            <li><a href="https://support.mozilla.org/en-US/kb/enable-and-disable-cookies-website-preferences" target="_blank" rel="noopener">Firefox cookie settings</a></li>
+            <li><a href="https://support.apple.com/guide/safari/manage-cookies-and-website-data-sfri11471/mac" target="_blank" rel="noopener">Safari cookie settings</a></li>
+          </ul>
+          <p class="small muted">Note: clearing or blocking cookies may reduce functionality on the site.</p>
+        </section>
+
+        <section id="children" class="section">
+          <h2>Children's Privacy</h2>
+          <p>Our site is not directed at children under 13. We do not knowingly collect personal information from children under 13. If we learn that we have collected information from a child under 13 without parental consent, we will take steps to delete that information promptly.</p>
+        </section>
+
+        <section id="international" class="section">
+          <h2>International Transfers</h2>
+          <p>QuietMind is hosted and operated from servers that may be located in different countries. When we transfer data across borders, we take appropriate safeguards (such as using service providers who implement standard contractual clauses or other lawful transfer mechanisms) to ensure adequate protection of your data.</p>
+        </section>
+
+        <section id="legal" class="section">
+          <h2>Legal Disclosures & Law Enforcement</h2>
+          <p>We may disclose personal data if required to do so by law or in response to valid requests by public authorities (e.g., a court or a government agency).</p>
+          <p class="small muted">If we receive a valid order to disclose data, we will attempt to notify you unless legally prohibited from doing so.</p>
+        </section>
+
+        <section id="policy-changes" class="section">
+          <h2>Changes to this Privacy Policy</h2>
+          <p>From time to time we may update this policy to reflect changes in our practices or legal requirements. When we make material changes, we will update the "Last updated" date and post a prominent notice on the site. We recommend you review this page periodically.</p>
+        </section>
+
+        <section id="contact" class="section">
+          <h2>Contact & Data Requests</h2>
+          <p>If you have questions about this Privacy Policy, wish to exercise your rights, or request deletion of personal data, contact us:</p>
+          <p class="small"><strong>Email:</strong> <a href="mailto:privacy@quietmind.fun">privacy@quietmind.fun</a></p>
+          <p class="small"><strong>Mail:</strong> QuietMind, PO Box / Address (if applicable)</p>
+
+          <div class="highlight">
+            Typical response time: we aim to acknowledge requests within 7 business days and to resolve verified requests as required by applicable law.
+          </div>
+        </section>
+
+        <section id="disclosures" class="section">
+          <h2>Additional Disclosures & Regulatory Notes</h2>
+          <h3>For European residents (GDPR)</h3>
+          <p class="small muted">If you are in the European Economic Area (EEA), you may have additional rights under the General Data Protection Regulation (GDPR). That includes rights of access, portability, rectification, deletion, restriction, and objection. To exercise these rights, contact us at the address above.</p>
+
+          <h3>For California residents (CCPA/CPRA)</h3>
+          <p class="small muted">If you are a California resident, you may have rights under the California Consumer Privacy Act (CCPA) and California Privacy Rights Act (CPRA). These rights may include the right to know, delete, and opt out of sale of personal information. We do not “sell” personal information as that term is commonly understood, but we do work with third-party ad providers who may use cookies to target ads.</p>
+        </section>
+
+        <section id="examples" class="section">
+          <h2>Practical Examples</h2>
+          <p>Below are a few common scenarios and how we handle them:</p>
+          <ul>
+            <li><strong>You sign up for the newsletter:</strong> We store your email and any optional name you provide. We use it to send emails and track open rates (via our email provider). You may unsubscribe at any time via the link in the email.</li>
+            <li><strong>You browse the site:</strong> We collect non-personal usage data through analytics (page viewed, device type, country inferred from IP). This helps us improve content and performance.</li>
+            <li><strong>You contact us through the form:</strong> We retain your message and email to respond. You can ask to have this information removed.</li>
+          </ul>
+        </section>
+
+        <section id="disclaimer" class="section">
+          <h2>Disclaimer</h2>
+          <p>The information on this website is provided for general informational purposes only and is not legal advice. QuietMind does not accept responsibility for errors or omissions in this policy or for changes to third-party practices.</p>
+        </section>
+
+        <section id="final" class="section">
+          <h2>Closing note</h2>
+          <p class="small muted">We are committed to transparency and to respecting your privacy. If you have feedback about this policy or suggestions for how we can improve, please get in touch.</p>
+          <a class="btn" href="contact.html">Contact QuietMind</a>
+        </section>
+      </article>
+
+      <aside class="sidebar">
+        <div class="card" role="complementary" aria-labelledby="quick-links">
+          <h3 id="quick-links">Quick links</h3>
+          <ul class="small">
+            <li><a href="#info-we-collect">Information We Collect</a></li>
+            <li><a href="#cookies">Cookies & Tracking</a></li>
+            <li><a href="#data-rights">Your Rights</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
         </div>
 
-        <h2>How We Use Your Information</h2>
-        <p>We may use the information we collect for the following purposes:</p>
-        <ul>
-            <li>To improve and personalize your experience on our website.</li>
-            <li>To analyze how our website is used and to understand our audience.</li>
-            <li>To show you relevant advertisements.</li>
-        </ul>
-        <p>We do not sell, trade, or otherwise transfer your personally identifiable information to outside parties.</p>
-
-        <h2>Third-Party Services</h2>
-        <p>Our website uses Google Analytics to help us understand how visitors interact with our content. We also use Google AdSense to display advertisements. These third-party services may collect information about your browsing habits. Please refer to their respective privacy policies for more information.</p>
-
-        <h2>Cookies</h2>
-        <p>Cookies are small files stored on your device that help us track website traffic and user behavior. You have the option to accept or decline cookies. Most web browsers automatically accept cookies, but you can usually modify your browser setting to decline cookies if you prefer. This may prevent you from taking full advantage of the website.</p>
-
-        <h2>Children's Privacy</h2>
-        <p>Our website is not intended for children under the age of 13. We do not knowingly collect personal information from children under 13. If we become aware that we have collected personal information from a child under 13 without verification of parental consent, we will take steps to remove that information from our servers.</p>
-    </section>
-
-    <div class="ad-panel">
-        <ins class="adsbygoogle"
-             style="display:block"
-             data-ad-client="ca-pub-1691321744656002"
-             data-ad-slot="9029919301"
-             data-ad-format="auto"
-             data-full-width-responsive="true"></ins>
-        <script>
-            // Ensure the ad script runs only when the container is ready
-            window.onload = function() {
-                const adPanel = document.querySelector('.ad-panel');
-                if (adPanel && adPanel.offsetWidth > 0) {
-                    (adsbygoogle = window.adsbygoogle || []).push({});
-                }
-            };
-        </script>
-    
-        <div class="fallback-ad">
-            <p>Sponsored</p>
-            <a href="https://paypal.me/UjjwalManandhar" target="_blank">
-                <img src="https://placehold.co/160x600/333/eee?text=Support+Me" alt="Fallback Ad">
-            </a>
+        <div class="card">
+          <h3>Policy snapshot</h3>
+          <p class="small muted">Short version: We collect minimal personal information; use analytics & ads for site support; you control cookies and can request deletion of your data.</p>
         </div>
+
+        <div class="card">
+          <h3>Opt-out & controls</h3>
+          <p class="small">Unsubscribe links in emails • Use browser cookie controls • Google Ads settings & Analytics opt-out add-on</p>
+        </div>
+
+        <div class="card">
+          <h3>Contact</h3>
+          <p class="small"><a href="mailto:privacy@quietmind.fun">privacy@quietmind.fun</a></p>
+        </div>
+      </aside>
+    </main>
+
+    <!-- Ad panel (kept from original) -->
+    <div class="ad-panel" role="complementary" aria-label="Advertisement">
+      <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-client="ca-pub-1691321744656002"
+           data-ad-slot="9029919301"
+           data-ad-format="auto"
+           data-full-width-responsive="true"></ins>
+      <script>
+          // Ensure the ad script runs only when the container is ready
+          window.onload = function() {
+              const adPanel = document.querySelector('.ad-panel');
+              if (adPanel && adPanel.offsetWidth > 0) {
+                  (adsbygoogle = window.adsbygoogle || []).push({});
+              }
+          };
+      </script>
+
+      <div class="fallback-ad">
+          <p style="color:#ddd;margin:8px 0 6px 0">Sponsored</p>
+          <a href="https://paypal.me/UjjwalManandhar" target="_blank" rel="noopener">
+              <img src="https://placehold.co/160x600/333/eee?text=Support+Me" alt="Fallback Ad" style="border-radius:6px">
+          </a>
+      </div>
     </div>
-</main>
 
-<footer class="site-footer">
-  <p style="margin:0;">
-    &copy; 2025 <a href="https://quietmind.fun/" target="_blank" rel="noopener">quietmind.fun</a>
-  </p>
-  <div class="links" aria-label="footer links">
-    <a href="PrivacyPolicy.html">Privacy Policy</a>
-    <span aria-hidden="true">|</span>
-    <a href="contact.html">Contact</a>
+    <footer>
+      <div class="small discrete">© 2025 <a href="https://quietmind.fun/" target="_blank" rel="noopener">quietmind.fun</a> • <a href="PrivacyPolicy.html">Privacy Policy</a> • <a href="contact.html">Contact</a></div>
+    </footer>
   </div>
-</footer>
 
 </body>
 </html>
