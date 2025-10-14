@@ -325,62 +325,110 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .cta-affiliate .cta-btn.secondary:hover { background: rgba(168,218,220,0.08); transform: none; filter: none; }
     .cta-affiliate .cta-note { margin-top: 8px; font-size: 12px; color: #a8dadc; }
 
-    /* Sticky CTA */
-    .sticky-cta {
-      position: fixed;
-      z-index: 1100;
-      left: 50%;
-      transform: translateX(-50%);
-      bottom: 18px;
-      background: rgba(8, 28, 21, 0.75);
-      backdrop-filter: blur(8px);
-      border: 1px solid rgba(255,255,255,0.08);
-      padding: 10px 12px;
-      border-radius: 16px;
-      box-shadow: 0 18px 48px -20px rgba(16,172,132,0.45);
-    }
-    .sticky-cta .cta-row { display: flex; align-items: center; gap: 10px; }
-    .sticky-cta .cta-btn {
-      display: inline-block;
-      text-decoration: none;
-      background: linear-gradient(135deg, #1dd1a1, #10ac84);
-      color: #081c15;
-      padding: 10px 16px;
-      border-radius: 10px;
-      font-weight: 800;
-      letter-spacing: 0.2px;
-      box-shadow: 0 10px 28px -14px rgba(16,172,132,0.55);
-      transition: transform .18s ease, box-shadow .18s ease;
-      border: 2px solid rgba(255,255,255,0.08);
-      white-space: nowrap;
-    }
-    .sticky-cta .cta-btn:hover { transform: translateY(-2px); box-shadow: 0 18px 42px -16px rgba(16,172,132,0.6); }
-    .sticky-cta .learn-link { color: #a8dadc; text-decoration: none; font-weight: 600; opacity: 0.9; }
-    .sticky-cta .learn-link:hover { text-decoration: underline; opacity: 1; }
+    
 
-    /* Mobile full-width bar */
-    @media (max-width: 768px) {
-      body { padding-bottom: 80px; } /* reserve space so sticky bar doesn't cover content */
-      .sticky-cta {
-        left: 0; right: 0; transform: none; bottom: 0;
-        border-radius: 0;
-        padding: 10px 14px;
-        display: flex; justify-content: center;
-        background: rgba(8, 28, 21, 0.85);
-      }
-      .sticky-cta .cta-row { width: 100%; gap: 8px; }
-      .sticky-cta .cta-btn { flex: 1; text-align: center; font-size: 15px; padding: 12px 16px; }
-      .sticky-cta .learn-link { white-space: nowrap; font-size: 14px; }
-    }
 
-    /* Desktop & Mobile: show sticky CTA with responsive sizes */
-    @media (min-width: 769px) {
-      .sticky-cta { display: block; bottom: 24px; }
-      .sticky-cta .cta-btn { font-size: 16px; padding: 12px 18px; }
-      .sticky-cta .learn-link { font-size: 15px; }
-    }
 
-    /* Donation panel (right side) */
+
+/* Sticky CTA */
+.sticky-cta {
+  position: fixed;
+  z-index: 1100;
+  top: 72px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(8, 28, 21, 0.95);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,255,255,0.08);
+  padding: 10px 14px;
+  border-radius: 14px;
+  box-shadow: 0 8px 28px -10px rgba(16,172,132,0.45);
+  text-align: center;
+  max-width: 420px;
+  width: calc(100% - 48px);
+  box-sizing: border-box;
+  overflow: visible;
+}
+
+/* Layout for cta-row and buttons */
+.sticky-cta .cta-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: nowrap;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Primary CTA button */
+.sticky-cta .cta-btn {
+  display: inline-block;
+  text-decoration: none;
+  background: linear-gradient(135deg, #1dd1a1, #10ac84);
+  color: #081c15;
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-weight: 800;
+  letter-spacing: 0.2px;
+  box-shadow: 0 10px 28px -14px rgba(16,172,132,0.55);
+  transition: transform .18s ease, box-shadow .18s ease;
+  border: 2px solid rgba(255,255,255,0.08);
+  white-space: nowrap;
+  max-width: 240px; /* prevents stretching */
+  width: auto;
+  flex-shrink: 0;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+/* Learn more link */
+.sticky-cta .learn-link {
+  color: #a8dadc;
+  text-decoration: none;
+  font-weight: 600;
+  opacity: 0.95;
+  white-space: nowrap;
+  box-sizing: border-box;
+}
+
+/* Subtext */
+.sticky-cta .cta-subtext {
+  font-size: 12px;
+  color: #a8dadc;
+  margin-top: 6px;
+  opacity: 0.95;
+  line-height: 1.2;
+  box-sizing: border-box;
+}
+
+/* Desktop: row layout, centered pill */
+@media (min-width: 769px) {
+  .sticky-cta { top: 72px; left: 50%; transform: translateX(-50%); max-width: 420px; width: auto; }
+  .sticky-cta .cta-row { flex-direction: row; gap: 12px; align-items: center; justify-content: center; }
+  .sticky-cta .cta-btn { width: auto; max-width: 240px; }
+  .breathing-section { padding-top: 160px; }
+}
+
+/* Mobile: stack vertically and make the button full-width */
+@media (max-width: 768px) {
+  .sticky-cta {
+    top: 56px;
+    left: 0;
+    right: 0;
+    transform: none;
+    border-radius: 0;
+    width: 100%;
+    max-width: none;
+    padding: 10px 12px;
+  }
+  .sticky-cta .cta-row { flex-direction: column; gap: 8px; align-items: stretch; }
+  .sticky-cta .cta-btn { width: 100%; max-width: none; font-size: 15px; padding: 12px 14px; }
+  .sticky-cta .learn-link { text-align: center; }
+  .sticky-cta .cta-subtext { font-size: 11px; margin-top: 6px; }
+  .breathing-section { padding-top: 120px; }
+}
+/* Donation panel (right side) */
     .donate-panel {
       position: fixed;
       top: 50%;
@@ -887,7 +935,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </nav>
 
-  <!-- Breathing Section -->
+<!-- Floating Sticky CTA (moved to top) -->
+<div class="sticky-cta" aria-hidden="false">
+  <div class="cta-row">
+    <a class="cta-btn" href="#" target="_blank" rel="noopener" aria-label="Book a confidential consultation">
+      Book Consultation
+    </a>
+    <a class="learn-link" href="landing.html" aria-label="Learn more about confidential online therapy">
+      Learn More
+    </a>
+  </div>
+  <div class="cta-subtext">Confidential · Private · Secure</div>
+</div>
+<!-- Breathing Section -->
   <section class="breathing-section">
     <div class="circle">
       <div class="counter">Ready?</div>
@@ -1328,15 +1388,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <span>↑</span>
   </button>
 
-  <!-- Floating Sticky CTA -->
-  <div class="sticky-cta" aria-hidden="false">
-    <div class="cta-row">
-      <a class="cta-btn" href="#" target="_blank" rel="noopener" aria-label="Book a confidential consultation">Book Now</a>
-      <a class="learn-link" href="landing.html" aria-label="Learn more about confidential online therapy">Learn More</a>
-    </div>
-  </div>
-
-  <footer style="background:#1e1e1e; color:#eee; text-align:center; padding:15px; margin-top:40px;">
+  
+</div>
+<footer style="background:#1e1e1e; color:#eee; text-align:center; padding:15px; margin-top:40px;">
   <p>&copy; 2025 https://quietmind.fun/ | 
     <a href="PrivacyPolicy.html" style="color:#00e6e6; text-decoration:none;">Privacy Policy</a> | 
     <a href="contact.html" style="color:#00e6e6; text-decoration:none;">Contact</a>

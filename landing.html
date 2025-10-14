@@ -5,102 +5,133 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Confidential Online Therapy & Psychiatry | QuietMind</title>
   <meta name="description" content="Talk to a licensed therapist online. 100% confidential sessions. Private, affordable care from home. Book a confidential consultation now.">
-
-  <!-- Favicon & Theme -->
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="icon" type="image/png" href="favicon.png">
   <link rel="apple-touch-icon" href="favicon.png">
-  <meta name="theme-color" content="#e6f4f1">
-
-  <!-- Open Graph / Twitter -->
-  <meta property="og:title" content="Confidential Online Therapy & Psychiatry | QuietMind">
-  <meta property="og:description" content="Private, secure online sessions with licensed professionals. Book now.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://quietmind.fun/">
-  <meta property="og:image" content="favicon.png">
-  <meta name="twitter:card" content="summary_large_image">
-
-  <!-- JSON-LD: WebPage (page-specific) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "Confidential Online Therapy & Psychiatry",
-    "url": "https://quietmind.fun/landing.html",
-    "description": "Talk to a licensed therapist online. 100% confidential sessions. Private, affordable care from home.",
-    "about": {
-      "@type": "Thing",
-      "name": "Online therapy and psychiatry"
-    }
-  }
-  </script>
+  <meta name="theme-color" content="#001f3f">
 
   <style>
     :root {
-      --bg: #f4fbfe;          /* light calm blue */
-      --bg-accent: #e6f4f1;   /* light mint */
-      --primary: #0ea5a3;     /* teal */
-      --primary-dark: #0a7c7a;
-      --text: #123;
-      --muted: #4a6670;
-      --ring: rgba(14,165,163,0.25);
+      --bg: #0d0d0d;
+      --bg-accent: #1a1a1a;
+      --primary: #00e6e6;
+      --primary-dark: #00b3b3;
+      --text: #eee;
+      --muted: #a8dadc;
+      --card-bg: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+      --ring: rgba(0, 230, 230, 0.2);
     }
 
     * { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
     body {
       margin: 0;
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: var(--bg);
       color: var(--text);
-      background: linear-gradient(180deg, var(--bg) 0%, #ffffff 100%);
     }
 
     .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
 
     /* Header */
-    .site-header { position: sticky; top: 0; z-index: 50; background: rgba(255,255,255,0.75); backdrop-filter: blur(8px); border-bottom: 1px solid #e7eef1; }
+    .site-header { 
+      position: sticky; top: 0; z-index: 50; 
+      background: rgba(17,17,17,0.85); 
+      backdrop-filter: blur(10px); 
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
     .nav { display: flex; align-items: center; justify-content: space-between; padding: 14px 0; }
-    .brand { display: flex; gap: 10px; align-items: center; text-decoration: none; color: var(--text); font-weight: 700; }
+    .brand { display: flex; gap: 10px; align-items: center; text-decoration: none; color: var(--primary); font-weight: 700; }
     .brand img { width: 28px; height: 28px; border-radius: 6px; }
-    .cta-top { text-decoration: none; background: var(--primary); color: white; padding: 10px 16px; border-radius: 10px; box-shadow: 0 8px 30px -12px var(--primary); transition: transform .2s ease, box-shadow .2s ease; }
+    .cta-top { 
+      text-decoration: none; 
+      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+      color: #111; 
+      padding: 10px 16px; 
+      border-radius: 10px; 
+      font-weight: 700;
+      box-shadow: 0 8px 30px -12px var(--primary);
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
     .cta-top:hover { transform: translateY(-1px); box-shadow: 0 12px 36px -12px var(--primary); }
 
     /* Hero */
-    .hero { padding: 64px 0 32px; text-align: center; }
-    .hero h1 { font-size: clamp(28px, 5vw, 44px); margin: 0 0 12px; line-height: 1.2; }
+    .hero { padding: 64px 0 32px; text-align: center; background: linear-gradient(180deg, #111 0%, #1a1a1a 100%); }
+    .hero h1 { font-size: clamp(28px, 5vw, 44px); margin: 0 0 12px; line-height: 1.2; color: var(--primary); }
     .hero p { font-size: clamp(16px, 2.5vw, 20px); color: var(--muted); margin: 0 auto 22px; max-width: 720px; }
-    .hero .cta-primary { display: inline-block; text-decoration: none; background: var(--primary); color: white; padding: 14px 22px; border-radius: 12px; font-weight: 700; box-shadow: 0 18px 48px -20px var(--primary); transition: transform .2s ease, box-shadow .2s ease; }
+    .hero .cta-primary { 
+      display: inline-block; text-decoration: none;
+      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+      color: #111; padding: 14px 22px; border-radius: 12px; font-weight: 700;
+      box-shadow: 0 18px 48px -20px var(--primary); 
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
     .hero .cta-primary:hover { transform: translateY(-2px); box-shadow: 0 24px 60px -18px var(--primary); }
     .hero .subnote { margin-top: 10px; font-size: 13px; color: var(--muted); }
 
     /* Benefits */
     .benefits { padding: 32px 0; }
     .grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
-    .card { background: white; border: 1px solid #eaf1f3; border-radius: 14px; padding: 18px; box-shadow: 0 8px 30px -18px var(--ring); transition: transform .2s ease, box-shadow .2s ease; }
+    .card { 
+      background: var(--card-bg);
+      border: 1px solid var(--ring);
+      border-radius: 14px;
+      padding: 18px;
+      box-shadow: 0 8px 30px -18px var(--ring);
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
     .card:hover { transform: translateY(-2px); box-shadow: 0 14px 42px -20px var(--ring); }
-    .card h3 { margin: 8px 0 6px; font-size: 16px; }
+    .card h3 { margin: 8px 0 6px; font-size: 16px; color: var(--primary); }
     .card p { margin: 0; color: var(--muted); font-size: 14px; }
-    .icon { width: 36px; height: 36px; border-radius: 10px; display: grid; place-items: center; background: var(--bg-accent); color: var(--primary); font-weight: 900; }
+    .icon { width: 36px; height: 36px; border-radius: 10px; display: grid; place-items: center; background: rgba(0, 230, 230, 0.1); color: var(--primary); font-weight: 900; }
 
     /* Trust / Testimonials */
     .trust { padding: 36px 0; }
+    .trust h2 { color: var(--primary); text-align: center; margin-bottom: 24px; }
     .quotes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
-    .quote { background: white; border: 1px solid #eaf1f3; border-radius: 14px; padding: 18px; font-size: 15px; color: var(--muted); box-shadow: 0 8px 30px -18px var(--ring); }
-    .quote strong { color: var(--text); }
+    .quote { 
+      background: var(--card-bg);
+      border: 1px solid var(--ring);
+      border-radius: 14px;
+      padding: 18px;
+      font-size: 15px;
+      color: var(--muted);
+      box-shadow: 0 8px 30px -18px var(--ring);
+    }
+    .quote strong { color: var(--primary); }
     .privacy { margin-top: 16px; font-size: 14px; color: var(--muted); text-align: center; }
 
     /* FAQ */
     .faq { padding: 36px 0; }
+    .faq h2 { color: var(--primary); text-align: center; margin-bottom: 24px; }
     .accordion { max-width: 900px; margin: 0 auto; }
-    .item { border: 1px solid #eaf1f3; border-radius: 12px; background: white; margin-bottom: 12px; overflow: hidden; }
-    .q { width: 100%; text-align: left; padding: 14px 16px; background: white; border: 0; font-size: 16px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
-    .q:hover { background: #f7fbfc; }
+    .item { 
+      border: 1px solid var(--ring);
+      border-radius: 12px;
+      background: var(--card-bg);
+      margin-bottom: 12px;
+      overflow: hidden;
+    }
+    .q { 
+      width: 100%; text-align: left; padding: 14px 16px;
+      background: transparent; border: 0; font-size: 16px;
+      cursor: pointer; display: flex; justify-content: space-between; align-items: center;
+      color: var(--text);
+    }
+    .q:hover { background: rgba(255,255,255,0.05); }
     .a { max-height: 0; overflow: hidden; transition: max-height .25s ease; padding: 0 16px; color: var(--muted); }
     .a.open { padding: 0 16px 14px; }
 
     /* Footer CTA */
-    .footer-cta { padding: 40px 0 60px; text-align: center; }
-    .footer-cta .cta-primary { display: inline-block; text-decoration: none; background: var(--primary); color: white; padding: 14px 22px; border-radius: 12px; font-weight: 700; box-shadow: 0 18px 48px -20px var(--primary); transition: transform .2s ease, box-shadow .2s ease; }
+    .footer-cta { padding: 40px 0 60px; text-align: center; background: #111; }
+    .footer-cta h2 { color: var(--primary); margin-bottom: 16px; }
+    .footer-cta .cta-primary { 
+      display: inline-block; text-decoration: none;
+      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+      color: #111; padding: 14px 22px; border-radius: 12px; font-weight: 700;
+      box-shadow: 0 18px 48px -20px var(--primary);
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
     .footer-cta .cta-primary:hover { transform: translateY(-2px); box-shadow: 0 24px 60px -18px var(--primary); }
 
     /* Responsive */
@@ -165,7 +196,7 @@
       </div>
     </section>
 
-    <!-- Trust / Testimonials -->
+    <!-- Testimonials -->
     <section class="trust" aria-labelledby="trust-heading">
       <div class="container">
         <h2 id="trust-heading">What People Say</h2>
@@ -215,7 +246,6 @@
   </main>
 
   <script>
-    // FAQ accordion (accessible)
     document.querySelectorAll('.q').forEach(btn => {
       btn.addEventListener('click', () => {
         const expanded = btn.getAttribute('aria-expanded') === 'true';
@@ -238,5 +268,3 @@
   </script>
 </body>
 </html>
-
-
