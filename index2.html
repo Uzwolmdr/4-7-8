@@ -638,11 +638,29 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       box-shadow: 0 5px 15px rgba(0, 230, 230, 0.2);
     }
 
-    /* Responsive adjustments */
+    /* Mobile-specific fixes for breathing animation */
     @media (max-width: 768px) {
-      .breathing-section { padding: 60px 20px 30px; }
-      .circle { margin-bottom: 60px; }
-      .counter { font-size: 22px; }
+      .breathing-section { 
+        padding: 60px 20px 30px; 
+        min-height: 100vh;
+        overflow: hidden; /* Prevent content from going beyond viewport */
+      }
+      
+      .circle { 
+        margin-bottom: 80px; /* Increased spacing to prevent overlap */
+        max-width: 60vw; /* Limit maximum size on mobile */
+        max-height: 60vw;
+        width: min(60vw, 200px); /* Smaller base size for mobile */
+        height: min(60vw, 200px);
+      }
+      
+      .counter { 
+        font-size: 22px; 
+        margin-bottom: 60px; /* Increased spacing */
+        z-index: 10; /* Ensure counter stays above other elements */
+        position: relative;
+      }
+      
       .button { font-size: 16px; padding: 12px 24px; }
       .donate-panel, .ad-panel { width: 120px; }
       .toc-list { grid-template-columns: 1fr; }
@@ -653,9 +671,27 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       .cta-buttons { flex-direction: column; align-items: center; }
       .cta-button { width: 100%; max-width: 250px; }
     }
+    
     @media (max-width: 480px) {
-      .breathing-section { padding: 40px 10px 20px; }
-      .circle { width: 70vw; height: 70vw; margin-bottom: 40px; }
+      .breathing-section { 
+        padding: 40px 10px 20px; 
+        min-height: 100vh;
+        overflow: hidden;
+      }
+      
+      .circle { 
+        width: min(50vw, 150px); /* Even smaller on very small screens */
+        height: min(50vw, 150px); 
+        margin-bottom: 100px; /* Extra spacing for very small screens */
+        max-width: 50vw;
+        max-height: 50vw;
+      }
+      
+      .counter { 
+        font-size: 20px;
+        margin-bottom: 80px; /* Extra spacing */
+      }
+      
       .donate-panel, .ad-panel { 
         position: static; 
         margin: 20px auto; 
@@ -664,6 +700,23 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       }
       .content-section h1 { font-size: 1.8rem; }
       .content-section h2 { font-size: 1.3rem; }
+    }
+    
+    /* Additional mobile-specific animation fixes */
+    @media (max-width: 768px) {
+      .circle {
+        /* Reduce scaling on mobile to prevent overflow */
+        transform-origin: center center;
+      }
+      
+      /* Override the JavaScript scaling for mobile */
+      .circle.mobile-scale {
+        transform: scale(1.2) !important; /* Reduced scale for mobile */
+      }
+      
+      .circle.mobile-scale-hold {
+        transform: scale(1.25) !important; /* Reduced scale for hold phase */
+      }
     }
   </style>
 </head>
@@ -958,11 +1011,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     let isPaused = false;
     let hasStarted = false;
 
-    const phases = [
-      { label: "Inhale through your nose", duration: 4, scale: 1.4 },
-      { label: "Hold your breath", duration: 7, scale: 1.45 },
-      { label: "Exhale through your mouth making a whoosh sound", duration: 8, scale: 1 }
-    ];
+    // Detect mobile device and update phases accordingly
+    function updatePhasesForScreenSize() {
+      const isMobile = window.innerWidth <= 768;
+      return [
+        { label: "Inhale through your nose", duration: 4, scale: isMobile ? 1.2 : 1.4 },
+        { label: "Hold your breath", duration: 7, scale: isMobile ? 1.25 : 1.45 },
+        { label: "Exhale through your mouth making a whoosh sound", duration: 8, scale: 1 }
+      ];
+    }
+    
+    let phases = updatePhasesForScreenSize();
 
     let phaseIndex = 0;
 
@@ -983,6 +1042,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     function runPhase(index) {
       if (isPaused) return;
 
+      // Update phases in case screen size changed
+      phases = updatePhasesForScreenSize();
       const phase = phases[index];
       currentPhase = phase;
 
@@ -1101,6 +1162,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           });
         }
       });
+    });
+
+    // Handle window resize for mobile/desktop transitions
+    window.addEventListener('resize', () => {
+      // Update phases when screen size changes
+      phases = updatePhasesForScreenSize();
+      
+      // If currently in a breathing session, update the current phase scale
+      if (hasStarted && !isPaused && currentPhase) {
+        circle.style.transition = 'none'; // Remove transition for immediate update
+        circle.style.transform = `scale(${currentPhase.scale})`;
+        // Re-add transition after a brief delay
+        setTimeout(() => {
+          circle.style.transition = `transform ${currentPhase.duration}s ease-in-out`;
+        }, 50);
+      }
     });
   </script>
   <!-- Back to Top Button -->
