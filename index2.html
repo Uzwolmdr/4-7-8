@@ -222,6 +222,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         inset 8px 8px 20px rgba(0, 0, 0, 0.4);
       position: relative;
       display: flex;
+      flex-direction: column; /* Stack text then counter */
       justify-content: center;
       align-items: center;
       color: white;
@@ -257,27 +258,25 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     }
 
     .counter {
-      position: absolute;
-      bottom: 20px;
-      left: 50%;
-      transform: translateX(-50%);
-      font-size: 36px;
+      position: static; /* center under text */
+      margin-top: 10px;
+      font-size: 28px; /* graceful desktop size */
       color: #00e6e6;
       font-weight: bold;
       text-shadow: 0 0 20px #00e6e6, 0 0 30px #2a5298;
-      z-index: 10;
+      z-index: 1;
       text-align: center;
-      animation: pulse 2s infinite;
+      animation: pulseCenter 2s infinite; /* use scale-only pulse globally */
     }
     
-    @keyframes pulse {
+    @keyframes pulseCenter {
       0%, 100% { 
-        transform: translateX(-50%) scale(1);
+        transform: scale(1);
         text-shadow: 0 0 20px #00e6e6, 0 0 30px #2a5298;
       }
       50% { 
-        transform: translateX(-50%) scale(1.1);
-        text-shadow: 0 0 30px #00e6e6, 0 0 40px #2a5298, 0 0 50px #00e6e6;
+        transform: scale(1.06);
+        text-shadow: 0 0 28px #00e6e6, 0 0 38px #2a5298, 0 0 46px #00e6e6;
       }
     }
 
