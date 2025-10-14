@@ -669,21 +669,39 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       }
       
       .circle { 
-        /* Increase base size but clamp to viewport to avoid overflow */
-        width: min(78vw, 65vh, 320px);
-        height: min(78vw, 65vh, 320px);
+        /* Clamp base size by max scale (1.25) so expanded circle fits viewport */
+        width: calc(min(78vw, 65vh, 320px) / 1.25);
+        height: calc(min(78vw, 65vh, 320px) / 1.25);
         margin-bottom: 56px; /* Extra space so expanded circle doesn't touch button */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
       }
       
       .counter { 
         font-size: 22px; /* Smaller counter on mobile */
-        bottom: 16px;
+        position: static; /* Place counter under the text */
+        margin-top: 10px;
+        animation: pulseCenter 2s infinite;
       }
       
       .text {
-        margin-bottom: 44px;
-        padding-top: 14px;
+        margin-bottom: 0; /* Counter sits right below */
+        padding-top: 6px;
         font-size: clamp(14px, 1.8vw, 18px);
+      }
+      
+      /* Scale-only pulse for centered counter on mobile */
+      @keyframes pulseCenter {
+        0%, 100% {
+          transform: scale(1);
+          text-shadow: 0 0 16px #00e6e6, 0 0 24px #2a5298;
+        }
+        50% {
+          transform: scale(1.1);
+          text-shadow: 0 0 26px #00e6e6, 0 0 38px #2a5298, 0 0 46px #00e6e6;
+        }
       }
       
       .button { 
@@ -709,20 +727,26 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       }
       
       .circle { 
-        /* Bigger than before, but still within viewport on tiny phones */
-        width: min(86vw, 68vh, 300px);
-        height: min(86vw, 68vh, 300px);
+        /* Clamp base size by max scale (1.25) for tiny phones too */
+        width: calc(min(90vw, 70vh, 300px) / 1.25);
+        height: calc(min(90vw, 70vh, 300px) / 1.25);
         margin-bottom: 64px; /* Ensure extra gap above Start button */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
       }
       
       .counter { 
         font-size: 18px; /* Further reduce for small screens */
-        bottom: 14px;
+        position: static;
+        margin-top: 8px;
+        animation: pulseCenter 2s infinite;
       }
       
       .text {
-        margin-bottom: 42px;
-        padding-top: 12px;
+        margin-bottom: 0;
+        padding-top: 6px;
         font-size: clamp(13px, 3.8vw, 17px);
       }
       
