@@ -209,6 +209,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       box-sizing: border-box;
       position: relative;
     }
+    
 
     .circle {
       width: min(80vw, 280px);
@@ -249,14 +250,35 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       word-wrap: break-word;
       font-size: clamp(16px, 2vw, 20px);
       z-index: 1;
+      margin-bottom: 50px; /* Make room for the counter below */
+      text-align: center;
+      line-height: 1.4;
+      padding-top: 20px; /* Add some top padding for better balance */
     }
 
     .counter {
-      margin-bottom: 40px;
-      font-size: 28px;
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 36px;
       color: #00e6e6;
       font-weight: bold;
-      text-shadow: 0 0 10px #00e6e6, 0 0 20px #2a5298;
+      text-shadow: 0 0 20px #00e6e6, 0 0 30px #2a5298;
+      z-index: 10;
+      text-align: center;
+      animation: pulse 2s infinite;
+    }
+    
+    @keyframes pulse {
+      0%, 100% { 
+        transform: translateX(-50%) scale(1);
+        text-shadow: 0 0 20px #00e6e6, 0 0 30px #2a5298;
+      }
+      50% { 
+        transform: translateX(-50%) scale(1.1);
+        text-shadow: 0 0 30px #00e6e6, 0 0 40px #2a5298, 0 0 50px #00e6e6;
+      }
     }
 
     .button {
@@ -647,7 +669,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       }
       
       .circle { 
-        margin-bottom: 80px; /* Increased spacing to prevent overlap */
+        margin-bottom: 40px; /* Reduced since counter is now positioned above */
         max-width: 60vw; /* Limit maximum size on mobile */
         max-height: 60vw;
         width: min(60vw, 200px); /* Smaller base size for mobile */
@@ -655,10 +677,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       }
       
       .counter { 
-        font-size: 22px; 
-        margin-bottom: 60px; /* Increased spacing */
-        z-index: 10; /* Ensure counter stays above other elements */
-        position: relative;
+        font-size: 28px; 
+        bottom: 15px;
+      }
+      
+      .text {
+        margin-bottom: 40px;
+        padding-top: 15px;
+        font-size: clamp(14px, 1.8vw, 18px);
       }
       
       .button { font-size: 16px; padding: 12px 24px; }
@@ -682,14 +708,20 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       .circle { 
         width: min(50vw, 150px); /* Even smaller on very small screens */
         height: min(50vw, 150px); 
-        margin-bottom: 100px; /* Extra spacing for very small screens */
+        margin-bottom: 30px; /* Reduced since counter is positioned above */
         max-width: 50vw;
         max-height: 50vw;
       }
       
       .counter { 
-        font-size: 20px;
-        margin-bottom: 80px; /* Extra spacing */
+        font-size: 24px;
+        bottom: 12px;
+      }
+      
+      .text {
+        margin-bottom: 35px;
+        padding-top: 12px;
+        font-size: clamp(12px, 1.6vw, 16px);
       }
       
       .donate-panel, .ad-panel { 
@@ -748,9 +780,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- Breathing Section -->
   <section class="breathing-section">
     <div class="circle">
+      <div class="counter">Ready?</div>
       <div class="text">Inhale through your nose</div>
     </div>
-    <div class="counter">Ready?</div>
     <div>
       <button class="button" id="startBtn">Start 4-7-8</button>
     </div>
