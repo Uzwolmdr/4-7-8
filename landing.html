@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Confidential Online Therapy & Psychiatry | QuietMind</title>
+  <meta name="description" content="Talk to a licensed therapist online. 100% confidential sessions. Private, affordable care from home. Book a confidential consultation now.">
+
+  <!-- Favicon & Theme -->
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="apple-touch-icon" href="favicon.png">
+  <meta name="theme-color" content="#e6f4f1">
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:title" content="Confidential Online Therapy & Psychiatry | QuietMind">
+  <meta property="og:description" content="Private, secure online sessions with licensed professionals. Book now.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://quietmind.fun/">
+  <meta property="og:image" content="favicon.png">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- JSON-LD: WebPage (page-specific) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Confidential Online Therapy & Psychiatry",
+    "url": "https://quietmind.fun/landing.html",
+    "description": "Talk to a licensed therapist online. 100% confidential sessions. Private, affordable care from home.",
+    "about": {
+      "@type": "Thing",
+      "name": "Online therapy and psychiatry"
+    }
+  }
+  </script>
+
+  <style>
+    :root {
+      --bg: #f4fbfe;          /* light calm blue */
+      --bg-accent: #e6f4f1;   /* light mint */
+      --primary: #0ea5a3;     /* teal */
+      --primary-dark: #0a7c7a;
+      --text: #123;
+      --muted: #4a6670;
+      --ring: rgba(14,165,163,0.25);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      color: var(--text);
+      background: linear-gradient(180deg, var(--bg) 0%, #ffffff 100%);
+    }
+
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+
+    /* Header */
+    .site-header { position: sticky; top: 0; z-index: 50; background: rgba(255,255,255,0.75); backdrop-filter: blur(8px); border-bottom: 1px solid #e7eef1; }
+    .nav { display: flex; align-items: center; justify-content: space-between; padding: 14px 0; }
+    .brand { display: flex; gap: 10px; align-items: center; text-decoration: none; color: var(--text); font-weight: 700; }
+    .brand img { width: 28px; height: 28px; border-radius: 6px; }
+    .cta-top { text-decoration: none; background: var(--primary); color: white; padding: 10px 16px; border-radius: 10px; box-shadow: 0 8px 30px -12px var(--primary); transition: transform .2s ease, box-shadow .2s ease; }
+    .cta-top:hover { transform: translateY(-1px); box-shadow: 0 12px 36px -12px var(--primary); }
+
+    /* Hero */
+    .hero { padding: 64px 0 32px; text-align: center; }
+    .hero h1 { font-size: clamp(28px, 5vw, 44px); margin: 0 0 12px; line-height: 1.2; }
+    .hero p { font-size: clamp(16px, 2.5vw, 20px); color: var(--muted); margin: 0 auto 22px; max-width: 720px; }
+    .hero .cta-primary { display: inline-block; text-decoration: none; background: var(--primary); color: white; padding: 14px 22px; border-radius: 12px; font-weight: 700; box-shadow: 0 18px 48px -20px var(--primary); transition: transform .2s ease, box-shadow .2s ease; }
+    .hero .cta-primary:hover { transform: translateY(-2px); box-shadow: 0 24px 60px -18px var(--primary); }
+    .hero .subnote { margin-top: 10px; font-size: 13px; color: var(--muted); }
+
+    /* Benefits */
+    .benefits { padding: 32px 0; }
+    .grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+    .card { background: white; border: 1px solid #eaf1f3; border-radius: 14px; padding: 18px; box-shadow: 0 8px 30px -18px var(--ring); transition: transform .2s ease, box-shadow .2s ease; }
+    .card:hover { transform: translateY(-2px); box-shadow: 0 14px 42px -20px var(--ring); }
+    .card h3 { margin: 8px 0 6px; font-size: 16px; }
+    .card p { margin: 0; color: var(--muted); font-size: 14px; }
+    .icon { width: 36px; height: 36px; border-radius: 10px; display: grid; place-items: center; background: var(--bg-accent); color: var(--primary); font-weight: 900; }
+
+    /* Trust / Testimonials */
+    .trust { padding: 36px 0; }
+    .quotes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .quote { background: white; border: 1px solid #eaf1f3; border-radius: 14px; padding: 18px; font-size: 15px; color: var(--muted); box-shadow: 0 8px 30px -18px var(--ring); }
+    .quote strong { color: var(--text); }
+    .privacy { margin-top: 16px; font-size: 14px; color: var(--muted); text-align: center; }
+
+    /* FAQ */
+    .faq { padding: 36px 0; }
+    .accordion { max-width: 900px; margin: 0 auto; }
+    .item { border: 1px solid #eaf1f3; border-radius: 12px; background: white; margin-bottom: 12px; overflow: hidden; }
+    .q { width: 100%; text-align: left; padding: 14px 16px; background: white; border: 0; font-size: 16px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
+    .q:hover { background: #f7fbfc; }
+    .a { max-height: 0; overflow: hidden; transition: max-height .25s ease; padding: 0 16px; color: var(--muted); }
+    .a.open { padding: 0 16px 14px; }
+
+    /* Footer CTA */
+    .footer-cta { padding: 40px 0 60px; text-align: center; }
+    .footer-cta .cta-primary { display: inline-block; text-decoration: none; background: var(--primary); color: white; padding: 14px 22px; border-radius: 12px; font-weight: 700; box-shadow: 0 18px 48px -20px var(--primary); transition: transform .2s ease, box-shadow .2s ease; }
+    .footer-cta .cta-primary:hover { transform: translateY(-2px); box-shadow: 0 24px 60px -18px var(--primary); }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .grid { grid-template-columns: repeat(2, 1fr); }
+      .quotes { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 540px) {
+      .grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <nav class="nav" aria-label="Main">
+        <a class="brand" href="/" aria-label="QuietMind Home">
+          <img src="favicon.png" alt="QuietMind logo">
+          <span>QuietMind</span>
+        </a>
+        <a class="cta-top" href="#consult" aria-label="Book a confidential consultation">Book Consultation</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero" id="top">
+      <div class="container">
+        <h1>Talk to a Licensed Therapist Online — 100% Confidential</h1>
+        <p>Get matched with qualified professionals for private, affordable online therapy and psychiatry — from the comfort of your home.</p>
+        <a class="cta-primary" href="#" id="consult" aria-label="Book a confidential consultation">Book a Confidential Consultation</a>
+        <div class="subnote">You’ll be redirected through our secure affiliate link.</div>
+      </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits">
+      <div class="container">
+        <div class="grid" role="list">
+          <article class="card" role="listitem">
+            <div class="icon" aria-hidden="true">🔒</div>
+            <h3>Confidential & Secure</h3>
+            <p>End-to-end encrypted platforms protect your privacy.</p>
+          </article>
+          <article class="card" role="listitem">
+            <div class="icon" aria-hidden="true">🎓</div>
+            <h3>Licensed Professionals</h3>
+            <p>Therapists and psychiatrists with verified credentials.</p>
+          </article>
+          <article class="card" role="listitem">
+            <div class="icon" aria-hidden="true">🕒</div>
+            <h3>Anytime, Anywhere</h3>
+            <p>Book sessions that fit your schedule, no travel needed.</p>
+          </article>
+          <article class="card" role="listitem">
+            <div class="icon" aria-hidden="true">💸</div>
+            <h3>Affordable Options</h3>
+            <p>Plans for different budgets — insurance may apply.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Trust / Testimonials -->
+    <section class="trust" aria-labelledby="trust-heading">
+      <div class="container">
+        <h2 id="trust-heading">What People Say</h2>
+        <div class="quotes">
+          <blockquote class="quote">“I was nervous at first, but the sessions felt private and safe. Getting help was easier than I thought.” — <strong>Rina</strong></blockquote>
+          <blockquote class="quote">“Professional and responsive. I could finally talk to someone without leaving home.” — <strong>Alex</strong></blockquote>
+          <blockquote class="quote">“No waiting rooms, no awkward encounters. Just confidential care.” — <strong>Sam</strong></blockquote>
+        </div>
+        <p class="privacy">Your privacy matters. Sessions are confidential and secured by the platform’s policies.</p>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq" aria-labelledby="faq-heading">
+      <div class="container">
+        <h2 id="faq-heading">Frequently Asked Questions</h2>
+        <div class="accordion" id="faq">
+          <div class="item">
+            <button class="q" aria-expanded="false" aria-controls="a1">Is it private?<span>+</span></button>
+            <div id="a1" class="a" role="region" aria-hidden="true">
+              <p>Yes. Sessions are confidential; platforms use encryption and strict privacy policies.</p>
+            </div>
+          </div>
+          <div class="item">
+            <button class="q" aria-expanded="false" aria-controls="a2">Do I need insurance?<span>+</span></button>
+            <div id="a2" class="a" role="region" aria-hidden="true">
+              <p>Not necessarily. Many providers offer affordable self-pay plans; some accept insurance.</p>
+            </div>
+          </div>
+          <div class="item">
+            <button class="q" aria-expanded="false" aria-controls="a3">How quickly can I start?<span>+</span></button>
+            <div id="a3" class="a" role="region" aria-hidden="true">
+              <p>Often within 24–48 hours. You’ll be matched with a suitable professional based on your needs.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer CTA -->
+    <section class="footer-cta">
+      <div class="container">
+        <h2>Ready to Talk — Confidentially?</h2>
+        <a class="cta-primary" href="#">Book a Confidential Consultation</a>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    // FAQ accordion (accessible)
+    document.querySelectorAll('.q').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        const content = btn.nextElementSibling;
+        btn.setAttribute('aria-expanded', String(!expanded));
+        content.classList.toggle('a-open');
+        if (!expanded) {
+          content.classList.add('open');
+          content.style.maxHeight = content.scrollHeight + 'px';
+          content.setAttribute('aria-hidden', 'false');
+          btn.querySelector('span').textContent = '–';
+        } else {
+          content.style.maxHeight = 0;
+          content.setAttribute('aria-hidden', 'true');
+          content.classList.remove('open');
+          btn.querySelector('span').textContent = '+';
+        }
+      });
+    });
+  </script>
+</body>
+</html>
+
+
