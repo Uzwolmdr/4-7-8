@@ -1,0 +1,7 @@
+# Enable Rewrite Engine
+RewriteEngine On
+
+# Force HTTPS and remove www
+RewriteCond %{HTTPS} !=on [OR]
+RewriteCond %{HTTP_HOST} ^www\.quietmind\.fun [NC]
+RewriteRule ^(.*)$ https://quietmind.fun%{REQUEST_URI} [L,R=301]
