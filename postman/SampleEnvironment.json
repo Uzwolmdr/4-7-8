@@ -1,0 +1,11 @@
+{
+  "id": "env-123456",
+  "name": "Sample Environment",
+  "values": [
+    {
+      "key": "baseUrl",
+      "value": "https://jsonplaceholder.typicode.com",
+      "enabled": true
+    }
+  ]
+}
