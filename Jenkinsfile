@@ -18,8 +18,8 @@ pipeline {
                 REM Create reports folder
                 if not exist reports mkdir reports
 
-                REM Run Postman collection with environment
-                newman run postman\\SampleCollection.json ^
+                REM Run Postman collection with environment using full path
+                C:\\Users\\swift\\AppData\\Roaming\\npm\\newman.cmd run postman\\SampleCollection.json ^
                     -e postman\\SampleEnvironment.json ^
                     --reporters cli,junit,htmlextra ^
                     --reporter-junit-export reports\\test-results.xml ^
